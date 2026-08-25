@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="gchair" gradientTransform="rotate(50.9)">
+      <stop offset="0" stop-color="#F7F3EC"/><stop offset="1" stop-color="#DBD1C0"/>
+    </linearGradient>
+    <linearGradient id="lchair" x1="0" y1="0" x2="0.4" y2="1">
+      <stop offset="0" stop-color="#FFFDF8" stop-opacity=".85"/>
+      <stop offset="1" stop-color="#FFFDF8" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="nchair" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="900" fill="url(#gchair)"/>
+  <g opacity=".55"><path d="M242.54098984971642 0 L554.5409898497164 0 L866.5409898497164 900 L314.5409898497164 900 Z" fill="url(#lchair)"/></g>
+  
+  
+  <g transform="translate(213.0 63.0) scale(7.7400)" opacity="0.3"><path d="M32 46 h36 v30 h-36 z" fill="none" stroke="#26241F" stroke-width="0.55" stroke-linecap="round" stroke-linejoin="round"/><path d="M32 76 h36 M36 76 V82 M64 76 V82" fill="none" stroke="#26241F" stroke-width="0.55" stroke-linecap="round" stroke-linejoin="round"/><path d="M28 60 h4 M28 60 V72 M28 72 h6" fill="none" stroke="#26241F" stroke-width="0.55" stroke-linecap="round" stroke-linejoin="round"/><path d="M40 46 V34 M60 46 V34 M40 34 h20" fill="none" stroke="#26241F" stroke-width="0.55" stroke-linecap="round" stroke-linejoin="round"/><path d="M30 66 L30.00 64.60 L30.00 67.40 L30.00 64.60 L30.00 67.40 L30.00 64.60 L30.00 67.40 L30.00 64.60 L30.00 67.40 L30.00 64.60 L30.00 67.40 L30.001 66" fill="none" stroke="#26241F" stroke-width="0.4" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <rect width="1200" height="900" filter="url(#nchair)" opacity=".07" style="mix-blend-mode:multiply"/>
+  
+</svg>

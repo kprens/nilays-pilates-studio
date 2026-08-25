@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100" width="1600" height="1100" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="ghero" gradientTransform="rotate(27.0)">
+      <stop offset="0" stop-color="#F7F3EC"/><stop offset="1" stop-color="#DBD1C0"/>
+    </linearGradient>
+    <linearGradient id="lhero" x1="0" y1="0" x2="0.4" y2="1">
+      <stop offset="0" stop-color="#FFFDF8" stop-opacity=".85"/>
+      <stop offset="1" stop-color="#FFFDF8" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="nhero" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="1100" fill="url(#ghero)"/>
+  <g opacity=".55"><path d="M372.037211291492 0 L788.037211291492 0 L1204.037211291492 1100 L468.037211291492 1100 Z" fill="url(#lhero)"/></g>
+  
+  <g opacity=".5"><path d="M1076.037211291492 0 L1492.037211291492 0 L1600 902 L852.037211291492 1100 Z" fill="url(#lhero)"/></g>
+  <g transform="translate(0.0 0.0) scale(16.0000)" opacity="0.14"><path d="M0 72 H100" fill="none" stroke="#26241F" stroke-width="0.3" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <rect width="1600" height="1100" filter="url(#nhero)" opacity=".07" style="mix-blend-mode:multiply"/>
+  <!-- yer tutucu: stüdyo genel -->
+</svg>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kprens.github.io/nilays-pilates-studio/sitemap.xml

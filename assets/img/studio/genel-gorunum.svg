@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="ggenel" gradientTransform="rotate(32.0)">
+      <stop offset="0" stop-color="#EBE4D8"/><stop offset="1" stop-color="#C9BEAA"/>
+    </linearGradient>
+    <linearGradient id="lgenel" x1="0" y1="0" x2="0.4" y2="1">
+      <stop offset="0" stop-color="#FFFDF8" stop-opacity=".85"/>
+      <stop offset="1" stop-color="#FFFDF8" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="ngenel" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#ggenel)"/>
+  <g opacity=".55"><path d="M252.85686285048723 0 L668.8568628504872 0 L1084.8568628504872 1000 L348.85686285048723 1000 Z" fill="url(#lgenel)"/></g>
+  
+  
+  <g transform="translate(370.0 70.0) scale(8.6000)" opacity="0.3"><path d="M0 66 H100 M0 20 H100" fill="none" stroke="#26241F" stroke-width="0.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 20 V66 M46 20 V66 M78 20 V66" fill="none" stroke="#26241F" stroke-width="0.35" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 30 h20 v26 h-20 z" fill="none" stroke="#26241F" stroke-width="0.55" stroke-linecap="round" stroke-linejoin="round"/><path d="M50 30 h20 v26 h-20 z" fill="none" stroke="#26241F" stroke-width="0.55" stroke-linecap="round" stroke-linejoin="round"/><path d="M28 30 V56 M60 30 V56" fill="none" stroke="#26241F" stroke-width="0.35" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 78 h30 v4 h-30 z" fill="none" stroke="#26241F" stroke-width="0.55" stroke-linecap="round" stroke-linejoin="round"/><path d="M56 74 h34 v6 h-34 z" fill="none" stroke="#26241F" stroke-width="0.55" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <rect width="1600" height="1000" filter="url(#ngenel)" opacity=".07" style="mix-blend-mode:multiply"/>
+  
+</svg>

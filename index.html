@@ -2,503 +2,744 @@
 <html lang="tr">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Nilay's Pilates Studio — Gaziosmanpaşa, Ankara. Aletli ve mat pilates, klinik pilates, hamile pilatesi ve İngilizce dersler. Ders programı ve deneme dersi kaydı.">
-<meta name="theme-color" content="#16202B">
-<meta property="og:title" content="Nilay's Pilates Studio | Gaziosmanpaşa, Ankara">
-<meta property="og:description" content="Aletli ve mat pilates, klinik pilates, hamile pilatesi ve English classes — GOP, Ankara. Ders programı ve deneme dersi kaydı.">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Nilay&#39;s Pilates Studio | Gaziosmanpaşa, Ankara — Reformer, Klinik ve Hamile Pilatesi</title>
+<meta name="description" content="Ankara Gaziosmanpaşa’da butik Pilates stüdyosu. Maksimum 7 kişilik reformer grup dersleri, birebir özel ders, klinik ve hamile pilatesi. İngilizce ders seçenekleri.">
+<meta name="theme-color" content="#F4F1EA" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1E201C" media="(prefers-color-scheme: dark)">
+<meta name="format-detection" content="telephone=no">
+<link rel="canonical" href="https://kprens.github.io/nilays-pilates-studio/">
+<link rel="alternate" hreflang="tr" href="https://kprens.github.io/nilays-pilates-studio/">
+<link rel="alternate" hreflang="en" href="https://kprens.github.io/nilays-pilates-studio/en/">
+<link rel="alternate" hreflang="x-default" href="https://kprens.github.io/nilays-pilates-studio/">
+
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="Nilay&#39;s Pilates Studio">
+<meta property="og:title" content="Nilay&#39;s Pilates Studio | Gaziosmanpaşa, Ankara — Reformer, Klinik ve Hamile Pilatesi">
+<meta property="og:description" content="Ankara Gaziosmanpaşa’da butik Pilates stüdyosu. Maksimum 7 kişilik reformer grup dersleri, birebir özel ders, klinik ve hamile pilatesi. İngilizce ders seçenekleri.">
+<meta property="og:url" content="https://kprens.github.io/nilays-pilates-studio/">
 <meta property="og:locale" content="tr_TR">
-<title>Nilay's Pilates Studio | GOP Ankara Reformer, Klinik ve Hamile Pilatesi</title>
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:image" content="https://kprens.github.io/nilays-pilates-studio/assets/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Nilay’s Pilates Studio — Gaziosmanpaşa, Ankara">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="assets/img/brand/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/img/brand/apple-touch-icon.png">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300&family=Karla:wght@300;400;500;600&display=swap">
-<style>
-  :root{
-    --ink:#16202B; --ink-soft:#33414F; --muted:#6B7A88;
-    --paper:#F4F6F7; --surface:#FFFFFF; --line:#DCE3E7;
-    --brass:#B08A4A; --brass-soft:#D9C08E; --sage:#6E8578;
-    --display:"Fraunces",Georgia,serif;
-    --body:"Karla","Helvetica Neue",Arial,sans-serif;
-    --wrap:1080px;
-  }
-  *{box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  body{
-    margin:0; background:var(--paper); color:var(--ink);
-    font-family:var(--body); font-size:17px; line-height:1.65;
-    -webkit-font-smoothing:antialiased;
-  }
-  .wrap{max-width:var(--wrap); margin:0 auto; padding:0 24px}
-  h1,h2,h3{font-family:var(--display); font-weight:400; text-wrap:balance; margin:0}
-  p{margin:0}
-  a{color:inherit}
+<link rel="preload" as="image" href="assets/img/studio/hero.svg?v=2aa518df" fetchpriority="high">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Inter:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="assets/css/app.css?v=b23b2c36">
 
-  /* demo bandı */
-  .demo-bar{
-    background:var(--ink); color:var(--brass-soft);
-    font-size:12px; letter-spacing:.16em; text-transform:uppercase;
-    text-align:center; padding:9px 16px; font-weight:600;
-  }
-
-  /* dil anahtarı */
-  .lang{
-    position:sticky; top:0; z-index:40; background:rgba(244,246,247,.92);
-    backdrop-filter:blur(8px); border-bottom:1px solid var(--line);
-  }
-  .lang-in{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:12px 24px; max-width:var(--wrap); margin:0 auto}
-  .mark{font-family:var(--display); font-size:18px; letter-spacing:.01em}
-  .mark span{color:var(--brass)}
-  .switch{display:flex; border:1px solid var(--line); border-radius:999px; overflow:hidden; background:var(--surface)}
-  .switch button{
-    font-family:var(--body); font-size:12px; font-weight:600; letter-spacing:.1em;
-    padding:7px 14px; border:0; background:transparent; color:var(--muted); cursor:pointer;
-  }
-  .switch button[aria-pressed="true"]{background:var(--ink); color:#fff}
-  .switch button:focus-visible{outline:2px solid var(--brass); outline-offset:-2px}
-
-  /* hero */
-  .hero{padding:72px 0 64px; position:relative}
-  .eyebrow{
-    font-size:11px; letter-spacing:.24em; text-transform:uppercase;
-    color:var(--brass); font-weight:600; margin-bottom:22px;
-  }
-  .hero h1{font-size:clamp(38px,6.4vw,68px); line-height:1.03; letter-spacing:-.015em}
-  .hero h1 em{font-style:italic; color:var(--brass)}
-  .hero .lede{max-width:52ch; margin-top:22px; color:var(--ink-soft); font-size:18px}
-  .hero-cta{display:flex; flex-wrap:wrap; gap:14px; margin-top:34px}
-  .btn{
-    display:inline-block; font-weight:600; font-size:14px; letter-spacing:.06em;
-    text-transform:uppercase; text-decoration:none; padding:15px 28px; border-radius:2px;
-    background:var(--ink); color:#fff; border:1px solid var(--ink); transition:.15s;
-  }
-  .btn:hover{background:#0B131C}
-  .btn.ghost{background:transparent; color:var(--ink)}
-  .btn.ghost:hover{background:var(--ink); color:#fff}
-  .btn:focus-visible{outline:2px solid var(--brass); outline-offset:3px}
-
-  .pillars{
-    display:flex; flex-wrap:wrap; gap:10px; margin-top:44px;
-    padding-top:26px; border-top:1px solid var(--line);
-  }
-  .pill{
-    font-size:12.5px; letter-spacing:.08em; text-transform:uppercase; font-weight:600;
-    color:var(--ink-soft); background:var(--surface); border:1px solid var(--line);
-    padding:8px 14px; border-radius:999px;
-  }
-
-  /* bölüm başlığı */
-  section{padding:64px 0}
-  .sec-head{margin-bottom:36px; max-width:60ch}
-  .sec-head h2{font-size:clamp(26px,3.6vw,36px); letter-spacing:-.01em}
-  .sec-head p{color:var(--muted); margin-top:10px}
-
-  /* dersler */
-  .classes{display:grid; grid-template-columns:repeat(auto-fit,minmax(288px,1fr)); gap:1px; background:var(--line); border:1px solid var(--line)}
-  .cls{background:var(--surface); padding:30px 26px; position:relative}
-  .cls::before{content:""; position:absolute; left:0; top:0; bottom:0; width:3px; background:var(--brass); opacity:0; transition:.15s}
-  .cls:hover::before{opacity:1}
-  .cls h3{font-size:22px; margin-bottom:6px}
-  .cls .who{font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:var(--brass); font-weight:600; margin-bottom:14px}
-  .cls p{color:var(--ink-soft); font-size:15.5px}
-  .cls.en-flag .who{color:var(--sage)}
-
-  /* program */
-  .table-scroll{overflow-x:auto; border:1px solid var(--line); background:var(--surface)}
-  table{border-collapse:collapse; width:100%; min-width:640px; font-size:14.5px}
-  th,td{padding:13px 14px; text-align:left; border-bottom:1px solid var(--line)}
-  thead th{
-    background:var(--ink); color:#fff; font-weight:600;
-    font-size:11.5px; letter-spacing:.14em; text-transform:uppercase;
-  }
-  tbody th{font-weight:600; color:var(--ink); white-space:nowrap; font-variant-numeric:tabular-nums}
-  td{color:var(--ink-soft)}
-  td.free{color:var(--muted)}
-  .tag{display:inline-block; font-size:11px; letter-spacing:.08em; text-transform:uppercase; font-weight:600; padding:3px 8px; border-radius:999px}
-  .tag.alet{background:#EEF3F6; color:#2C5468}
-  .tag.mat{background:#F1F0EA; color:#6B5A2E}
-  .tag.klinik{background:#EDF2EF; color:#3F6152}
-  .tag.hamile{background:#F7EFEF; color:#7A4A4A}
-  .tag.en{background:#ECEEF6; color:#3E4780}
-  .note{font-size:14px; color:var(--muted); margin-top:14px}
-
-  /* paketler */
-  .packs{display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:18px}
-  .pack{background:var(--surface); border:1px solid var(--line); padding:26px 22px; display:flex; flex-direction:column}
-  .pack.hi{border-color:var(--ink); box-shadow:0 1px 0 var(--ink)}
-  .pack h3{font-size:20px}
-  .pack .amt{font-family:var(--display); font-size:26px; color:var(--brass); margin:14px 0 4px}
-  .pack .cond{font-size:14px; color:var(--muted); flex:1}
-  .pack .best{font-size:11px; letter-spacing:.14em; text-transform:uppercase; font-weight:600; color:var(--ink); margin-bottom:10px}
-
-  /* form */
-  .book{background:var(--ink); color:#fff; padding:64px 0}
-  .book h2{color:#fff}
-  .book .sec-head p{color:#A9B7C3}
-  .form{background:#1D2937; border:1px solid #2C3B4B; padding:30px 26px}
-  .grid2{display:grid; grid-template-columns:1fr 1fr; gap:18px}
-  label{display:block; font-size:11.5px; letter-spacing:.14em; text-transform:uppercase; font-weight:600; color:var(--brass-soft); margin-bottom:8px}
-  .field{margin-bottom:20px}
-  input,select,textarea{
-    width:100%; font-family:var(--body); font-size:16px; color:#fff;
-    background:#16202B; border:1px solid #33445A; border-radius:2px; padding:13px 14px;
-  }
-  textarea{resize:vertical; min-height:82px}
-  input:focus,select:focus,textarea:focus{outline:2px solid var(--brass); outline-offset:-1px; border-color:var(--brass)}
-  select option{background:#16202B}
-  .slots{display:flex; flex-wrap:wrap; gap:9px}
-  .slot{
-    font-family:var(--body); font-size:14px; font-variant-numeric:tabular-nums;
-    background:#16202B; color:#fff; border:1px solid #33445A; border-radius:2px;
-    padding:11px 16px; cursor:pointer; transition:.12s;
-  }
-  .slot:hover{border-color:var(--brass)}
-  .slot[aria-pressed="true"]{background:var(--brass); border-color:var(--brass); color:#16202B; font-weight:600}
-  .slot[disabled]{opacity:.38; cursor:not-allowed; text-decoration:line-through}
-  .submit{
-    width:100%; margin-top:6px; font-family:var(--body); font-weight:600; font-size:14px;
-    letter-spacing:.1em; text-transform:uppercase; background:var(--brass); color:#16202B;
-    border:0; padding:17px; border-radius:2px; cursor:pointer;
-  }
-  .submit:hover{background:#C29A54}
-  .done{display:none; text-align:center; padding:30px 20px; border:1px solid var(--brass); background:#1D2937}
-  .done.on{display:block}
-  .done h3{color:var(--brass-soft); font-size:24px; margin-bottom:8px}
-  .done p{color:#A9B7C3; font-size:15px}
-
-  /* konum */
-  .info{display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:26px}
-  .info h3{font-size:13px; letter-spacing:.14em; text-transform:uppercase; font-family:var(--body); font-weight:600; color:var(--brass); margin-bottom:10px}
-  .info p{color:var(--ink-soft); font-size:15.5px}
-  footer{border-top:1px solid var(--line); padding:34px 0 54px; color:var(--muted); font-size:14px}
-
-  @media(max-width:640px){
-    body{font-size:16px}
-    .hero{padding:48px 0 44px}
-    section{padding:48px 0}
-    .grid2{grid-template-columns:1fr; gap:0}
-    .book{padding:48px 0}
-    .form{padding:24px 18px}
-  }
-  @media(prefers-reduced-motion:reduce){*{transition:none!important; scroll-behavior:auto!important}}
-</style>
+<script>document.documentElement.classList.add('js')</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":["HealthAndBeautyBusiness","SportsActivityLocation"],"name":"Nilay's Pilates Studio","description":"Ankara Gaziosmanpaşa’da butik Pilates stüdyosu. Maksimum 7 kişilik reformer grup dersleri, birebir özel ders, klinik ve hamile pilatesi. İngilizce ders seçenekleri.","url":"https://kprens.github.io/nilays-pilates-studio/","image":"https://kprens.github.io/nilays-pilates-studio/assets/img/og.png","address":{"@type":"PostalAddress","streetAddress":"Beyaz Zambaklar Sok. 9/4","addressLocality":"Gaziosmanpaşa","addressRegion":"Ankara","addressCountry":"TR"},"hasMap":"https://www.google.com/maps/search/?api=1&query=Nilay%27s%20Pilates%20Studio%20Gaziosmanpa%C5%9Fa%20Ankara","sameAs":["https://instagram.com/nilayspilatesstudio"],"inLanguage":"tr"}</script>
 </head>
 <body>
+<a class="skip" href="#main">İçeriğe geç</a>
 
-<div class="demo-bar" data-en="Sample page · prepared for <span lang=&quot;en&quot;>Nilay's Pilates Studio</span>">Örnek sayfa · <span lang="en">Nilay's Pilates Studio</span> için hazırlandı</div>
-
-<div class="lang">
-  <div class="lang-in">
-    <div class="mark">Nilay's <span>Pilates</span> Studio</div>
-    <div class="switch" role="group" aria-label="Dil / Language">
-      <button id="btn-tr" aria-pressed="true">TR</button>
-      <button id="btn-en" aria-pressed="false">EN</button>
-    </div>
-  </div>
-</div>
-
-<header class="hero">
-  <div class="wrap">
-    <div class="eyebrow" data-en="Gaziosmanpaşa · Ankara">Gaziosmanpaşa · Ankara</div>
-    <h1 data-en='Small-group pilates,<br>taught <em>properly</em>.'>Küçük gruplarla,<br><em>doğru</em> pilates.</h1>
-    <p class="lede" data-en="Reformer and Cadillac work, mat classes, clinical pilates and pregnancy pilates — plus classes taught fully in English. Beyaz Zambaklar Sok. 9/4, GOP.">Aletli ve mat pilates, klinik pilates ve hamile pilatesi. Ayrıca tamamen İngilizce yürütülen dersler. Beyaz Zambaklar Sok. 9/4, GOP.</p>
-    <div class="hero-cta">
-      <a class="btn" href="#randevu" data-en="Book a trial class">Deneme dersi ayırt</a>
-      <a class="btn ghost" href="#program" data-en="See the schedule">Ders programı</a>
-    </div>
-    <div class="pillars">
-      <span class="pill" lang="en" data-en="Reformer &amp; Cadillac">Reformer &amp; Cadillac</span>
-      <span class="pill" data-en="Clinical pilates">Klinik pilates</span>
-      <span class="pill" data-en="Pregnancy pilates">Hamile pilatesi</span>
-      <span class="pill" lang="en" data-en="English classes">English classes</span>
+<header class="header" id="site-header">
+  <div class="header-in">
+    <a class="brand" href="#hero" aria-label="Nilay&#39;s Pilates Studio"><span>Nilay&#39;s</span> <span class="ac">Pilates</span> <span>Studio</span></a>
+    <nav class="nav" aria-label="Menü">
+      <a href="#dersler">Dersler</a><a href="#studyo">Stüdyo</a><a href="#yaklasim">Yaklaşımımız</a><a href="#ekip">Ekip</a><a href="#paketler">Paketler</a><a href="#program">Ders Programı</a><a href="#iletisim">İletişim</a>
+    </nav>
+    <div class="header-side">
+      <p class="lang">
+      <a href="#" aria-current="true" hreflang="tr" lang="tr">TR</a>
+      <span class="sep" aria-hidden="true">|</span>
+      <a href="en/" hreflang="en" lang="en">EN</a>
+    </p>
+      <button class="burger" type="button" id="burger" aria-expanded="false" aria-controls="menu" aria-label="Menü">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </div>
 </header>
 
-<section id="dersler">
-  <div class="wrap">
-    <div class="sec-head">
-      <h2 data-en="Classes">Dersler</h2>
-      <p data-en="Every class runs in small groups or one-to-one, so the load is set for the person — not the room.">Bütün dersler küçük grup ya da birebir yürüyor; direnç odaya göre değil, kişiye göre ayarlanıyor.</p>
+<div class="menu" id="menu" hidden>
+  <nav aria-label="Menü">
+    <ul>
+      <li><a class="m-link" href="#dersler" style="--d:80ms">Dersler</a></li><li><a class="m-link" href="#studyo" style="--d:125ms">Stüdyo</a></li><li><a class="m-link" href="#yaklasim" style="--d:170ms">Yaklaşımımız</a></li><li><a class="m-link" href="#ekip" style="--d:215ms">Ekip</a></li><li><a class="m-link" href="#paketler" style="--d:260ms">Paketler</a></li><li><a class="m-link" href="#program" style="--d:305ms">Ders Programı</a></li><li><a class="m-link" href="#iletisim" style="--d:350ms">İletişim</a></li>
+    </ul>
+  </nav>
+  <div class="menu-foot">
+    <div class="row">
+      <a href="https://instagram.com/nilayspilatesstudio" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Nilay%27s%20Pilates%20Studio%20Gaziosmanpa%C5%9Fa%20Ankara" target="_blank" rel="noopener noreferrer">Google Maps</a>
     </div>
-    <div class="classes">
-      <article class="cls">
-        <div class="who" lang="en" data-en="Reformer · Cadillac">Reformer · Cadillac</div>
-        <h3 data-en="Equipment Pilates">Aletli Pilates</h3>
-        <p data-en="Spring-loaded equipment lets resistance be dialled to your body. The fastest route to control and correct alignment.">Yaylı aletlerde çalışılır, direnç bedeninize göre ayarlanır. Kontrol ve doğru duruş için en hızlı yol.</p>
-      </article>
-      <article class="cls">
-        <div class="who" data-en="Group class">Grup dersi</div>
-        <h3 data-en="Mat Pilates">Mat Pilates</h3>
-        <p data-en="Bodyweight work on the mat. Builds the core strength that every other class stands on.">Minderde, kendi vücut ağırlığınızla. Diğer bütün derslerin üzerine kurulduğu merkez gücünü kurar.</p>
-      </article>
-      <article class="cls">
-        <div class="who" data-en="Assessment first">Önce değerlendirme</div>
-        <h3 data-en="Clinical Pilates">Klinik Pilates</h3>
-        <p data-en="For low-back and neck pain, posture problems and post-operative periods. Starts with an assessment, then a programme written for you.">Bel ve boyun ağrısı, duruş bozukluğu ve ameliyat sonrası dönem için. Değerlendirmeyle başlar, size özel program çıkarılır.</p>
-      </article>
-      <article class="cls">
-        <div class="who" data-en="With doctor's approval">Hekim onayıyla</div>
-        <h3 data-en="Pregnancy Pilates">Hamile Pilatesi</h3>
-        <p data-en="Adapted trimester by trimester. Breathing, pelvic floor and the strength that carries you through the day.">Trimestere göre uyarlanır. Nefes, pelvik taban ve günü taşıyan güç üzerine çalışılır.</p>
-      </article>
-      <article class="cls en-flag">
-        <div class="who" data-en="In English">İngilizce</div>
-        <h3 data-en="English Pilates Classes">English Pilates Classes</h3>
-        <p data-en="Mat, reformer and clinical sessions taught fully in English — for Ankara's international community in and around GOP.">Mat, reformer ve klinik dersler tamamen İngilizce yürütülür — GOP ve çevresindeki yabancı topluluk için.</p>
-      </article>
-      <article class="cls">
-        <div class="who" data-en="Private session">Özel ders</div>
-        <h3 data-en="One-to-one">Birebir Ders</h3>
-        <p data-en="A session for one. The usual choice for clinical and pregnancy work, or when the group pace doesn't suit you.">Tek kişiye özel seans. Klinik ve hamile çalışmalarında ilk tercih; grup temposu size uymuyorsa da uygun.</p>
-      </article>
+    <p class="small muted">Gaziosmanpaşa, Ankara</p>
+  </div>
+</div>
+
+<main id="main">
+<header class="hero" id="hero">
+  <div class="hero-bg">
+    <img src="assets/img/studio/hero.svg?v=2aa518df" alt="Nilay’s Pilates Studio — stüdyo alanı"
+         fetchpriority="high" decoding="async">
+    <span class="ph">Yer tutucu görsel — gerçek stüdyo fotoğrafı gelince değişecek</span>
+  </div>
+  <div class="hero-in wrap wrap-wide">
+    <p class="eyebrow">Gaziosmanpaşa · Ankara</p>
+    <h1 class="h1"><span><i style="--d:120ms">Daha iyi hareket edin.</i></span><span><i style="--d:230ms">Daha güçlü hissedin.</i></span></h1>
+    <p class="lede hero-lede" data-reveal style="--d:420ms">Ankara’da kişiye özel yaklaşımla çalışan butik Pilates stüdyosu.</p>
+    <div class="hero-cta" data-reveal style="--d:520ms">
+      <a class="btn" href="#dersler">Dersleri Keşfet<svg class="arw" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 7h10M8 3l4 4-4 4"/></svg></a>
+      <a class="btn btn-ghost" href="#iletisim">İletişime Geç</a>
+    </div>
+    <ul class="chips" data-reveal style="--d:600ms">
+      <li>Reformer</li><li>Hamile Pilatesi</li><li>Klinik Pilates</li><li>Küçük Grup</li><li>Özel Ders</li>
+    </ul>
+  </div>
+</header>
+<section class="section" id="fark" aria-labelledby="fark-h">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow" data-reveal="fade"><span class="num">01</span> Bizi Farklı Kılan</p>
+      <h2 class="h2" id="fark-h" data-reveal style="--d:60ms">Pilates, kişisel bir deneyimdir.</h2>
+    </div>
+    <dl class="diff-list">
+      <div class="diff-item" data-reveal>
+        <span class="n">01</span>
+        <dt class="h3">Küçük Gruplar</dt>
+        <dd class="body">Daha fazla ilgi, daha doğru yönlendirme ve daha kişisel bir ders deneyimi.</dd>
+      </div><div class="diff-item" data-reveal style="--d:70ms">
+        <span class="n">02</span>
+        <dt class="h3">Kişiye Özel Yaklaşım</dt>
+        <dd class="body">Her beden farklıdır. Dersler öğrencinin seviyesine, ihtiyaçlarına ve hedeflerine göre şekillenir.</dd>
+      </div><div class="diff-item" data-reveal style="--d:140ms">
+        <span class="n">03</span>
+        <dt class="h3">Profesyonel Ekipman</dt>
+        <dd class="body">Reformer, Tower, Cadillac ve Chair ekipmanlarıyla kapsamlı Pilates deneyimi.</dd>
+      </div><div class="diff-item" data-reveal style="--d:210ms">
+        <span class="n">04</span>
+        <dt class="h3">Deneyimli Eğitmenler</dt>
+        <dd class="body">Ortak kalite anlayışıyla çalışan profesyonel eğitmen ekibi.</dd>
+      </div><div class="diff-item" data-reveal style="--d:280ms">
+        <span class="n">05</span>
+        <dt class="h3">İngilizce Dersler</dt>
+        <dd class="body">İngilizce konuşan öğrenciler için uygun ders seçenekleri.</dd>
+      </div>
+    </dl>
+  </div>
+</section>
+<section class="section" id="dersler" aria-labelledby="dersler-h">
+  <div class="wrap">
+    <div class="section-head">
+    <p class="eyebrow" data-reveal="fade"><span class="num">02</span> Dersler</p>
+    <h2 class="h2" id="dersler-h" data-reveal style="--d:60ms">İki farklı ritim, aynı özen.</h2>
+    
+  </div>
+    <article class="class-row">
+      <figure class="figure " data-reveal="img" style="--d:40ms">
+    <img src="assets/img/studio/reformer-grup.svg?v=ab6a01d7" alt="Stüdyodaki reformer grup dersi alanı" width="1400" height="1050"
+         loading="lazy" decoding="async">
+    <figcaption class="ph">Yer tutucu görsel — gerçek stüdyo fotoğrafı gelince değişecek</figcaption>
+  </figure>
+      <div>
+        <p class="class-label" data-reveal="fade">Grup Dersi</p>
+        <p class="class-name" data-reveal="fade" style="--d:40ms">Reformer Grup Dersleri</p>
+        <h3 class="h2" data-reveal style="--d:80ms">Kalabalıkta Kaybolmadan, Birlikte İlerleyin.</h3>
+        <p class="body class-body" data-reveal style="--d:140ms">Maksimum 7 kişilik gruplarda; kişisel ilginin, doğru formun ve sıcak bir atmosferin korunduğu etkili Pilates dersleri. Kendi ritminizde bedeninizi güçlendirirken günün stresini geride bırakın ve aynı tutkuyu paylaşan bir topluluğun parçası olun.</p>
+        <dl class="facts" data-reveal style="--d:200ms">
+          <div><dt>Kimler için?</dt><dd>Yeni başlayanlar, düzenli Pilates yapanlar ve daha kişisel bir grup dersi deneyimi isteyen herkes.</dd></div><div><dt>Grup büyüklüğü</dt><dd>Maksimum 7 kişi</dd></div>
+        </dl>
+        <a class="link" href="#program" data-reveal style="--d:260ms">Ders Programını Gör<svg class="arw" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 7h10M8 3l4 4-4 4"/></svg></a>
+      </div>
+    </article><article class="class-row flip">
+      <figure class="figure " data-reveal="img" style="--d:40ms">
+    <img src="assets/img/studio/ozel-ders.svg?v=c9fec46e" alt="Birebir özel Pilates dersinin yapıldığı alan" width="1400" height="1050"
+         loading="lazy" decoding="async">
+    <figcaption class="ph">Yer tutucu görsel — gerçek stüdyo fotoğrafı gelince değişecek</figcaption>
+  </figure>
+      <div>
+        <p class="class-label" data-reveal="fade">Birebir</p>
+        <p class="class-name" data-reveal="fade" style="--d:40ms">Özel Pilates Dersi</p>
+        <h3 class="h2" data-reveal style="--d:80ms">Sadece Senin Bedenin, Senin Hedeflerin.</h3>
+        <p class="body class-body" data-reveal style="--d:140ms">Tüm dikkatin ve uzmanlığın tamamen size ayrıldığı bire bir Pilates dersleri. Bedeninizin ihtiyaçlarına, postürünüze ve kişisel hedeflerinize özel hazırlanan antrenman programıyla; her hareketi en doğru formda uygulayın, sakatlanma riskini sıfırlayın ve maksimum verim alın.</p>
+        <dl class="facts" data-reveal style="--d:200ms">
+          <div><dt>Süre</dt><dd>50 dakika</dd></div><div><dt>His</dt><dd>Profesyonel, hedef odaklı, ayrıcalıklı.</dd></div>
+        </dl>
+        <a class="link" href="#paketler" data-reveal style="--d:260ms">Özel Pilates Derslerini Keşfet<svg class="arw" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 7h10M8 3l4 4-4 4"/></svg></a>
+      </div>
+    </article>
+  </div>
+</section>
+<section class="section" id="studyo" aria-labelledby="studyo-h">
+  <div class="wrap wrap-wide">
+    <div class="cols cols-head">
+      <div class="section-head" style="margin-bottom:0">
+        <p class="eyebrow" data-reveal="fade"><span class="num">03</span> Stüdyo</p>
+        <h2 class="h2" id="studyo-h" data-reveal style="--d:60ms">Kendinize ait bir alan.</h2>
+      </div>
+      <div class="studio-meta">
+        <p class="lede" data-reveal style="--d:80ms">Kendinize, hareketinize ve gelişiminize odaklanabileceğiniz sakin, kişisel ve profesyonel bir alan.</p><p class="body" data-reveal style="--d:150ms">Nilay’s Pilates Studio; küçük gruplar, profesyonel ekipmanlar ve kişisel ilgiyle kaliteli bir Pilates deneyimi sunmak için tasarlandı.</p>
+        <p class="studio-loc" data-reveal style="--d:220ms">Konum<strong>Gaziosmanpaşa, Ankara</strong></p>
+        <a class="btn btn-ghost" style="justify-self:start" href="https://www.google.com/maps/search/?api=1&query=Nilay%27s%20Pilates%20Studio%20Gaziosmanpa%C5%9Fa%20Ankara" target="_blank" rel="noopener noreferrer" data-reveal style="--d:280ms"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Konumu Gör</a>
+      </div>
+    </div>
+
+    <div class="gallery" id="galeri">
+      <button class="g-item g-wide" type="button" data-lb="0" data-reveal
+        aria-label="Genel Görünüm — Galeriyi büyüt">
+        <img src="assets/img/studio/genel-gorunum.svg?v=91daf098" alt="Stüdyonun genel görünümü" loading="lazy" decoding="async">
+        <span class="ph">Yer tutucu görsel — gerçek stüdyo fotoğrafı gelince değişecek</span>
+        <figcaption><span>Genel Görünüm</span><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5.5 1.5H1.5v4M8.5 12.5h4v-4M12.5 5.5v-4h-4M1.5 8.5v4h4"/></svg></figcaption>
+      </button><button class="g-item g-tall" type="button" data-lb="1" data-reveal style="--d:60ms"
+        aria-label="Reformer — Galeriyi büyüt">
+        <img src="assets/img/studio/reformer.svg?v=2d3e4843" alt="Stüdyodaki reformer ekipmanları" loading="lazy" decoding="async">
+        <span class="ph">Yer tutucu görsel — gerçek stüdyo fotoğrafı gelince değişecek</span>
+        <figcaption><span>Reformer</span><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5.5 1.5H1.5v4M8.5 12.5h4v-4M12.5 5.5v-4h-4M1.5 8.5v4h4"/></svg></figcaption>
+      </button><button class="g-item g-std" type="button" data-lb="2" data-reveal style="--d:120ms"
+        aria-label="Tower — Galeriyi büyüt">
+        <img src="assets/img/studio/tower.svg?v=19c5f9ac" alt="Tower ekipmanı" loading="lazy" decoding="async">
+        <span class="ph">Yer tutucu görsel — gerçek stüdyo fotoğrafı gelince değişecek</span>
+        <figcaption><span>Tower</span><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5.5 1.5H1.5v4M8.5 12.5h4v-4M12.5 5.5v-4h-4M1.5 8.5v4h4"/></svg></figcaption>
+      </button><button class="g-item g-std" type="button" data-lb="3" data-reveal style="--d:180ms"
+        aria-label="Cadillac — Galeriyi büyüt">
+        <img src="assets/img/studio/cadillac.svg?v=ee3d53bc" alt="Cadillac ekipmanı" loading="lazy" decoding="async">
+        <span class="ph">Yer tutucu görsel — gerçek stüdyo fotoğrafı gelince değişecek</span>
+        <figcaption><span>Cadillac</span><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5.5 1.5H1.5v4M8.5 12.5h4v-4M12.5 5.5v-4h-4M1.5 8.5v4h4"/></svg></figcaption>
+      </button><button class="g-item g-std" type="button" data-lb="4" data-reveal
+        aria-label="Chair — Galeriyi büyüt">
+        <img src="assets/img/studio/chair.svg?v=e1a23b9f" alt="Chair ekipmanı" loading="lazy" decoding="async">
+        <span class="ph">Yer tutucu görsel — gerçek stüdyo fotoğrafı gelince değişecek</span>
+        <figcaption><span>Chair</span><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5.5 1.5H1.5v4M8.5 12.5h4v-4M12.5 5.5v-4h-4M1.5 8.5v4h4"/></svg></figcaption>
+      </button><button class="g-item g-std" type="button" data-lb="5" data-reveal style="--d:60ms"
+        aria-label="Detaylar — Galeriyi büyüt">
+        <img src="assets/img/studio/detay.svg?v=44c5ad25" alt="Stüdyodan detay" loading="lazy" decoding="async">
+        <span class="ph">Yer tutucu görsel — gerçek stüdyo fotoğrafı gelince değişecek</span>
+        <figcaption><span>Detaylar</span><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5.5 1.5H1.5v4M8.5 12.5h4v-4M12.5 5.5v-4h-4M1.5 8.5v4h4"/></svg></figcaption>
+      </button><button class="g-item g-wide" type="button" data-lb="6" data-reveal style="--d:120ms"
+        aria-label="Ders — Galeriyi büyüt">
+        <img src="assets/img/studio/ders.svg?v=21e2a7a5" alt="Stüdyoda süren bir ders" loading="lazy" decoding="async">
+        <span class="ph">Yer tutucu görsel — gerçek stüdyo fotoğrafı gelince değişecek</span>
+        <figcaption><span>Ders</span><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5.5 1.5H1.5v4M8.5 12.5h4v-4M12.5 5.5v-4h-4M1.5 8.5v4h4"/></svg></figcaption>
+      </button><button class="g-item g-std" type="button" data-lb="7" data-reveal style="--d:180ms"
+        aria-label="Giriş — Galeriyi büyüt">
+        <img src="assets/img/studio/giris.svg?v=27a05fe7" alt="Stüdyo girişi" loading="lazy" decoding="async">
+        <span class="ph">Yer tutucu görsel — gerçek stüdyo fotoğrafı gelince değişecek</span>
+        <figcaption><span>Giriş</span><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5.5 1.5H1.5v4M8.5 12.5h4v-4M12.5 5.5v-4h-4M1.5 8.5v4h4"/></svg></figcaption>
+      </button><button class="g-item g-tall" type="button" data-lb="8" data-reveal
+        aria-label="Atmosfer — Galeriyi büyüt">
+        <img src="assets/img/studio/atmosfer.svg?v=089fb483" alt="Stüdyonun atmosferi" loading="lazy" decoding="async">
+        <span class="ph">Yer tutucu görsel — gerçek stüdyo fotoğrafı gelince değişecek</span>
+        <figcaption><span>Atmosfer</span><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5.5 1.5H1.5v4M8.5 12.5h4v-4M12.5 5.5v-4h-4M1.5 8.5v4h4"/></svg></figcaption>
+      </button>
     </div>
   </div>
 </section>
-
-<section id="program">
-  <div class="wrap">
-    <div class="sec-head">
-      <h2 data-en="Weekly schedule">Haftalık program</h2>
-      <p data-en="Sample layout. Send your real timetable and it goes in exactly as it is.">Örnek yerleşim. Gerçek programınızı gönderdiğinizde birebir işlenir.</p>
+<section class="section deep" id="yaklasim" aria-labelledby="yaklasim-h">
+  <div class="wrap wrap-wide">
+    <div class="approach-grid">
+      <div class="approach-fig"><figure class="figure is-tall" data-reveal="img">
+    <img src="assets/img/studio/yaklasim.svg?v=47877f36" alt="Hareket üzerine çalışılan stüdyo alanı" width="1400" height="1600"
+         loading="lazy" decoding="async">
+    <figcaption class="ph">Yer tutucu görsel — gerçek stüdyo fotoğrafı gelince değişecek</figcaption>
+  </figure></div>
+      <div>
+        <div class="section-head">
+          <p class="eyebrow" data-reveal="fade"><span class="num">04</span> Yaklaşımımız</p>
+          <h2 class="h2" id="yaklasim-h" data-reveal style="--d:60ms">Pilates, hareket etmekten fazlasıdır.</h2>
+          <p class="lede" data-reveal style="--d:120ms">Pilates’i yalnızca bir egzersiz olarak değil; daha güçlü, daha bilinçli ve bedenine daha güvenli bir şekilde hareket etmenin bir yolu olarak görüyoruz.</p>
+        </div>
+        <dl class="values">
+          <div class="value" data-reveal>
+            <dt>Kalite</dt>
+            <dd>Hareketleri sadece yapmak değil, doğru yapmak.</dd>
+          </div><div class="value" data-reveal style="--d:80ms">
+            <dt>Gelişim</dt>
+            <dd>Kusursuzluk yerine sürdürülebilir gelişim.</dd>
+          </div><div class="value" data-reveal style="--d:160ms">
+            <dt>Kişisellik</dt>
+            <dd>Her bedenin farklı olduğunu kabul etmek.</dd>
+          </div><div class="value" data-reveal style="--d:240ms">
+            <dt>Özgüven</dt>
+            <dd>Hareket ettikçe bedenine daha fazla güvenmek.</dd>
+          </div>
+        </dl>
+      </div>
     </div>
-    <div class="table-scroll">
-      <table>
-        <thead>
-          <tr>
-            <th data-en="Time">Saat</th>
-            <th data-en="Mon">Pzt</th>
-            <th data-en="Tue">Sal</th>
-            <th data-en="Wed">Çar</th>
-            <th data-en="Thu">Per</th>
-            <th data-en="Fri">Cum</th>
-            <th data-en="Sat">Cmt</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th>09:30</th>
-            <td><span class="tag alet" data-en="Equipment">Aletli</span></td>
-            <td><span class="tag mat">Mat</span></td>
-            <td><span class="tag alet" data-en="Equipment">Aletli</span></td>
-            <td><span class="tag mat">Mat</span></td>
-            <td><span class="tag alet" data-en="Equipment">Aletli</span></td>
-            <td><span class="tag mat">Mat</span></td>
-          </tr>
-          <tr>
-            <th>11:00</th>
-            <td><span class="tag hamile" data-en="Pregnancy">Hamile</span></td>
-            <td><span class="tag klinik" data-en="Clinical">Klinik</span></td>
-            <td><span class="tag hamile" data-en="Pregnancy">Hamile</span></td>
-            <td><span class="tag klinik" data-en="Clinical">Klinik</span></td>
-            <td><span class="tag hamile" data-en="Pregnancy">Hamile</span></td>
-            <td class="free" data-en="—">—</td>
-          </tr>
-          <tr>
-            <th>13:00</th>
-            <td><span class="tag en" lang="en">English</span></td>
-            <td class="free" data-en="—">—</td>
-            <td><span class="tag en" lang="en">English</span></td>
-            <td class="free" data-en="—">—</td>
-            <td><span class="tag en" lang="en">English</span></td>
-            <td class="free" data-en="—">—</td>
-          </tr>
-          <tr>
-            <th>18:00</th>
-            <td><span class="tag alet" data-en="Equipment">Aletli</span></td>
-            <td><span class="tag alet" data-en="Equipment">Aletli</span></td>
-            <td><span class="tag alet" data-en="Equipment">Aletli</span></td>
-            <td><span class="tag alet" data-en="Equipment">Aletli</span></td>
-            <td><span class="tag alet" data-en="Equipment">Aletli</span></td>
-            <td class="free" data-en="—">—</td>
-          </tr>
-          <tr>
-            <th>19:30</th>
-            <td><span class="tag mat">Mat</span></td>
-            <td><span class="tag klinik" data-en="Clinical">Klinik</span></td>
-            <td><span class="tag mat">Mat</span></td>
-            <td><span class="tag klinik" data-en="Clinical">Klinik</span></td>
-            <td class="free" data-en="—">—</td>
-            <td class="free" data-en="—">—</td>
-          </tr>
-        </tbody>
+  </div>
+</section>
+<section class="section" id="ekip" aria-labelledby="ekip-h">
+  <div class="wrap">
+    <div class="section-head">
+    <p class="eyebrow" data-reveal="fade"><span class="num">05</span> Ekibimiz</p>
+    <h2 class="h2" id="ekip-h" data-reveal style="--d:60ms">Deneyimli eğitmenler. Ortak bir yaklaşım.</h2>
+    <p class="lede" data-reveal style="--d:120ms">Nilay’s Pilates Studio’da eğitmenlerimiz ortak bir kalite ve eğitim anlayışıyla çalışır.</p>
+  </div>
+    <ul class="team">
+      <li class="member" data-reveal>
+        <figure class="figure " data-reveal="img">
+    <img src="assets/img/team/nilay-kentkur.svg?v=edbbfaff" alt="Nilay Kentkur — Kurucu ve Pilates Eğitmeni" width="900" height="1150"
+         loading="lazy" decoding="async">
+    <figcaption class="ph">Yer tutucu görsel — gerçek stüdyo fotoğrafı gelince değişecek</figcaption>
+  </figure>
+        <h3 class="h3">Nilay Kentkur</h3>
+        <p class="role">Kurucu ve Pilates Eğitmeni</p>
+      </li><li class="member" data-reveal style="--d:90ms">
+        <figure class="figure " data-reveal="img" style="--d:90ms">
+    <img src="assets/img/team/damla.svg?v=f34aaf0b" alt="Damla — Pilates Eğitmeni" width="900" height="1150"
+         loading="lazy" decoding="async">
+    <figcaption class="ph">Yer tutucu görsel — gerçek stüdyo fotoğrafı gelince değişecek</figcaption>
+  </figure>
+        <h3 class="h3">Damla</h3>
+        <p class="role">Pilates Eğitmeni</p>
+      </li><li class="member" data-reveal style="--d:180ms">
+        <figure class="figure " data-reveal="img" style="--d:180ms">
+    <img src="assets/img/team/hilal.svg?v=6b5d4716" alt="Hilal — Pilates Eğitmeni" width="900" height="1150"
+         loading="lazy" decoding="async">
+    <figcaption class="ph">Yer tutucu görsel — gerçek stüdyo fotoğrafı gelince değişecek</figcaption>
+  </figure>
+        <h3 class="h3">Hilal</h3>
+        <p class="role">Pilates Eğitmeni</p>
+      </li>
+    </ul>
+  </div>
+</section>
+<section class="section" id="kurucu" aria-labelledby="kurucu-h">
+  <div class="wrap">
+    <div class="founder">
+      <figure class="figure " data-reveal="img">
+    <img src="assets/img/team/nilay-kentkur.svg?v=edbbfaff" alt="Nilay Kentkur portresi" width="900" height="1150"
+         loading="lazy" decoding="async">
+    <figcaption class="ph">Yer tutucu görsel — gerçek stüdyo fotoğrafı gelince değişecek</figcaption>
+  </figure>
+      <div>
+        <p class="eyebrow" data-reveal="fade"><span class="num">06</span> Kurucu</p>
+        <h2 class="h2" id="kurucu-h" data-reveal style="--d:60ms">Nilay Kentkur</h2>
+        <p class="role" data-reveal style="--d:100ms">Kurucu ve Pilates Eğitmeni</p>
+        <div class="founder-body">
+          <p class="lede" data-reveal style="--d:140ms">Nilay Kentkur, Nilay’s Pilates Studio’nun kurucusu ve Pilates eğitmenidir.</p><p class="body" data-reveal style="--d:210ms">Hareket farkındalığı, doğru teknik ve kişiye özel yönlendirmeyi merkeze alan yaklaşımıyla stüdyoyu; insanların güçlenebileceği, hareket kalitesini geliştirebileceği ve bedenlerine daha fazla güven duyabileceği profesyonel bir alan olarak oluşturmuştur.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section" id="paketler" aria-labelledby="paketler-h">
+  <div class="wrap">
+    <div class="section-head">
+    <p class="eyebrow" data-reveal="fade"><span class="num">07</span> Paketler</p>
+    <h2 class="h2" id="paketler-h" data-reveal style="--d:60ms">Size uygun paketi seçin.</h2>
+    
+  </div>
+
+    <div class="tabs" role="tablist" aria-label="Paketler" data-reveal="fade">
+      <button class="tab" type="button" role="tab" id="tab-ozel"
+        aria-controls="panel-ozel" aria-selected="true" tabindex="0">
+        Özel Ders <span class="muted" aria-hidden="true">· 1 Kişi</span>
+      </button><button class="tab" type="button" role="tab" id="tab-ikili"
+        aria-controls="panel-ikili" aria-selected="false" tabindex="-1">
+        2’li Ders <span class="muted" aria-hidden="true">· 2 Kişi</span>
+      </button><button class="tab" type="button" role="tab" id="tab-grup"
+        aria-controls="panel-grup" aria-selected="false" tabindex="-1">
+        Grup Dersi <span class="muted" aria-hidden="true">· 3 Kişi ve Üzeri</span>
+      </button>
+    </div>
+
+    <div class="panel" id="panel-ozel" role="tabpanel" aria-labelledby="tab-ozel">
+      <p class="lede panel-sum">Tamamen size özel, birebir Pilates deneyimi.</p>
+      <div class="tiers">
+        <article class="tier">
+            
+            <p class="tier-count">8 Ders</p>
+            <p class="tier-total">9.000 ₺</p>
+            <p class="tier-per">1.125 ₺ <span class="muted">/ ders</span></p>
+            <p class="tier-meta">
+              <span>6 hafta</span>
+              
+            </p>
+            <a class="tier-cta" href="#iletisim">Bu paket için yazın<svg class="arw" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 7h10M8 3l4 4-4 4"/></svg></a>
+          </article><article class="tier">
+            
+            <p class="tier-count">12 Ders</p>
+            <p class="tier-total">13.000 ₺</p>
+            <p class="tier-per">1.083 ₺ <span class="muted">/ ders</span></p>
+            <p class="tier-meta">
+              <span>8 hafta</span>
+              <span>−42 ₺ ders başına avantaj</span>
+            </p>
+            <a class="tier-cta" href="#iletisim">Bu paket için yazın<svg class="arw" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 7h10M8 3l4 4-4 4"/></svg></a>
+          </article><article class="tier is-best">
+            <p class="tier-badge">En avantajlı</p>
+            <p class="tier-count">24 Ders</p>
+            <p class="tier-total">24.000 ₺</p>
+            <p class="tier-per">1.000 ₺ <span class="muted">/ ders</span></p>
+            <p class="tier-meta">
+              <span>14 hafta</span>
+              <span>−125 ₺ ders başına avantaj</span>
+            </p>
+            <a class="tier-cta" href="#iletisim">Bu paket için yazın<svg class="arw" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 7h10M8 3l4 4-4 4"/></svg></a>
+          </article>
+      </div>
+    </div><div class="panel" id="panel-ikili" role="tabpanel" aria-labelledby="tab-ikili" hidden>
+      <p class="lede panel-sum">Bir arkadaşınız veya partnerinizle birlikte, daha kişisel bir ders deneyimi.</p>
+      <div class="tiers">
+        <article class="tier">
+            
+            <p class="tier-count">8 Ders</p>
+            <p class="tier-total">5.500 ₺</p>
+            <p class="tier-per">687,50 ₺ <span class="muted">/ ders</span></p>
+            <p class="tier-meta">
+              <span>6 hafta</span>
+              
+            </p>
+            <a class="tier-cta" href="#iletisim">Bu paket için yazın<svg class="arw" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 7h10M8 3l4 4-4 4"/></svg></a>
+          </article><article class="tier">
+            
+            <p class="tier-count">12 Ders</p>
+            <p class="tier-total">7.500 ₺</p>
+            <p class="tier-per">625 ₺ <span class="muted">/ ders</span></p>
+            <p class="tier-meta">
+              <span>8 hafta</span>
+              <span>−62,50 ₺ ders başına avantaj</span>
+            </p>
+            <a class="tier-cta" href="#iletisim">Bu paket için yazın<svg class="arw" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 7h10M8 3l4 4-4 4"/></svg></a>
+          </article><article class="tier is-best">
+            <p class="tier-badge">En avantajlı</p>
+            <p class="tier-count">24 Ders</p>
+            <p class="tier-total">14.400 ₺</p>
+            <p class="tier-per">600 ₺ <span class="muted">/ ders</span></p>
+            <p class="tier-meta">
+              <span>14 hafta</span>
+              <span>−87,50 ₺ ders başına avantaj</span>
+            </p>
+            <a class="tier-cta" href="#iletisim">Bu paket için yazın<svg class="arw" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 7h10M8 3l4 4-4 4"/></svg></a>
+          </article>
+      </div>
+    </div><div class="panel" id="panel-grup" role="tabpanel" aria-labelledby="tab-grup" hidden>
+      <p class="lede panel-sum">Küçük gruplarda, eğitmenin kişisel ilgisini koruduğu bir Pilates deneyimi.</p>
+      <div class="tiers">
+        <article class="tier">
+            
+            <p class="tier-count">8 Ders</p>
+            <p class="tier-total">4.500 ₺</p>
+            <p class="tier-per">562,50 ₺ <span class="muted">/ ders</span></p>
+            <p class="tier-meta">
+              <span>6 hafta</span>
+              
+            </p>
+            <a class="tier-cta" href="#iletisim">Bu paket için yazın<svg class="arw" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 7h10M8 3l4 4-4 4"/></svg></a>
+          </article><article class="tier">
+            
+            <p class="tier-count">12 Ders</p>
+            <p class="tier-total">6.000 ₺</p>
+            <p class="tier-per">500 ₺ <span class="muted">/ ders</span></p>
+            <p class="tier-meta">
+              <span>8 hafta</span>
+              <span>−62,50 ₺ ders başına avantaj</span>
+            </p>
+            <a class="tier-cta" href="#iletisim">Bu paket için yazın<svg class="arw" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 7h10M8 3l4 4-4 4"/></svg></a>
+          </article><article class="tier is-best">
+            <p class="tier-badge">En avantajlı</p>
+            <p class="tier-count">24 Ders</p>
+            <p class="tier-total">11.520 ₺</p>
+            <p class="tier-per">480 ₺ <span class="muted">/ ders</span></p>
+            <p class="tier-meta">
+              <span>14 hafta</span>
+              <span>−82,50 ₺ ders başına avantaj</span>
+            </p>
+            <a class="tier-cta" href="#iletisim">Bu paket için yazın<svg class="arw" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 7h10M8 3l4 4-4 4"/></svg></a>
+          </article>
+      </div>
+    </div>
+
+    <p class="small muted price-note" data-reveal="fade">Paket süreleri satın alma tarihinden itibaren geçerlidir. Ayrıntılar ve uygunluk için bize yazabilirsiniz.</p>
+  </div>
+</section>
+<section class="section" id="program" aria-labelledby="program-h">
+  <div class="wrap">
+    <div class="section-head">
+    <p class="eyebrow" data-reveal="fade"><span class="num">08</span> Ders Programı</p>
+    <h2 class="h2" id="program-h" data-reveal style="--d:60ms">Haftalık ders programı.</h2>
+    
+  </div>
+
+    <p class="sched-note" data-reveal="fade"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="6.5"/><path d="M8 7.2v4M8 4.8h.01"/></svg><span>Aşağıdaki yerleşim örnektir. Stüdyonun güncel haftalık programı paylaşıldığında birebir işlenecek.</span></p>
+
+    <div class="sched-desktop" data-reveal="fade">
+      <table class="sched-week">
+        <caption class="sr">Haftalık ders programı.</caption>
+        <thead><tr>
+          <th scope="col">Gün</th>
+          <th scope="col">Saat · Ders · Eğitmen</th>
+        </tr></thead>
+        <tbody><tr>
+    <th scope="row">Pazartesi</th>
+    <td><span class="slot-row">
+          <span class="slot-time">18:00</span>
+          <span class="slot-type">Reformer</span>
+          
+          <span class="slot-who">Damla</span>
+        </span><span class="slot-row">
+          <span class="slot-time">19:00</span>
+          <span class="slot-type">Reformer</span>
+          <span class="badge-en">İngilizce</span>
+          <span class="slot-who"></span>
+        </span></td>
+  </tr><tr>
+    <th scope="row">Salı</th>
+    <td><span class="slot-row">
+          <span class="slot-time">10:00</span>
+          <span class="slot-type">Reformer</span>
+          
+          <span class="slot-who">Hilal</span>
+        </span><span class="slot-row">
+          <span class="slot-time">18:00</span>
+          <span class="slot-type">Reformer</span>
+          
+          <span class="slot-who">Nilay Kentkur</span>
+        </span></td>
+  </tr><tr>
+    <th scope="row">Çarşamba</th>
+    <td><span class="slot-row">
+          <span class="slot-time">18:00</span>
+          <span class="slot-type">Reformer</span>
+          
+          <span class="slot-who">Damla</span>
+        </span><span class="slot-row">
+          <span class="slot-time">19:00</span>
+          <span class="slot-type">Reformer</span>
+          <span class="badge-en">İngilizce</span>
+          <span class="slot-who"></span>
+        </span></td>
+  </tr><tr>
+    <th scope="row">Perşembe</th>
+    <td><span class="slot-row">
+          <span class="slot-time">10:00</span>
+          <span class="slot-type">Reformer</span>
+          
+          <span class="slot-who">Hilal</span>
+        </span><span class="slot-row">
+          <span class="slot-time">18:00</span>
+          <span class="slot-type">Reformer</span>
+          
+          <span class="slot-who">Nilay Kentkur</span>
+        </span></td>
+  </tr><tr>
+    <th scope="row">Cuma</th>
+    <td><span class="slot-row">
+          <span class="slot-time">18:00</span>
+          <span class="slot-type">Reformer</span>
+          
+          <span class="slot-who">Damla</span>
+        </span></td>
+  </tr><tr>
+    <th scope="row">Cumartesi</th>
+    <td><span class="slot-row">
+          <span class="slot-time">11:00</span>
+          <span class="slot-type">Reformer</span>
+          
+          <span class="slot-who">Nilay Kentkur</span>
+        </span></td>
+  </tr><tr>
+    <th scope="row">Pazar</th>
+    <td><span class="sched-empty">Ders yok</span></td>
+  </tr></tbody>
       </table>
     </div>
-    <p class="note" data-en="Birebir sessions are arranged outside these hours by appointment.">Birebir dersler bu saatlerin dışında, randevuyla ayarlanır.</p>
+
+    <div class="sched-mobile" data-sched>
+      <div class="day-tabs" role="tablist" aria-label="Haftalık ders programı."><button class="day-tab" type="button" role="tab" id="dtab-pzt"
+    aria-controls="dpanel-pzt" aria-selected="true" tabindex="0">
+    <span class="d">Pzt</span><span class="c">2</span>
+  </button><button class="day-tab" type="button" role="tab" id="dtab-sal"
+    aria-controls="dpanel-sal" aria-selected="false" tabindex="-1">
+    <span class="d">Sal</span><span class="c">2</span>
+  </button><button class="day-tab" type="button" role="tab" id="dtab-car"
+    aria-controls="dpanel-car" aria-selected="false" tabindex="-1">
+    <span class="d">Çar</span><span class="c">2</span>
+  </button><button class="day-tab" type="button" role="tab" id="dtab-per"
+    aria-controls="dpanel-per" aria-selected="false" tabindex="-1">
+    <span class="d">Per</span><span class="c">2</span>
+  </button><button class="day-tab" type="button" role="tab" id="dtab-cum"
+    aria-controls="dpanel-cum" aria-selected="false" tabindex="-1">
+    <span class="d">Cum</span><span class="c">1</span>
+  </button><button class="day-tab" type="button" role="tab" id="dtab-cmt"
+    aria-controls="dpanel-cmt" aria-selected="false" tabindex="-1">
+    <span class="d">Cmt</span><span class="c">1</span>
+  </button><button class="day-tab" type="button" role="tab" id="dtab-paz"
+    aria-controls="dpanel-paz" aria-selected="false" tabindex="-1">
+    <span class="d">Paz</span><span class="c">–</span>
+  </button></div>
+      <div class="day-panel" id="dpanel-pzt" role="tabpanel" aria-labelledby="dtab-pzt">
+    <article class="day-card">
+          <p class="t"><span class="time">18:00</span></p>
+          <p class="type">Reformer</p>
+          <p class="who">Damla</p>
+        </article><article class="day-card">
+          <p class="t"><span class="time">19:00</span><span class="badge-en">İngilizce</span></p>
+          <p class="type">Reformer</p>
+          
+        </article>
+  </div><div class="day-panel" id="dpanel-sal" role="tabpanel" aria-labelledby="dtab-sal" hidden>
+    <article class="day-card">
+          <p class="t"><span class="time">10:00</span></p>
+          <p class="type">Reformer</p>
+          <p class="who">Hilal</p>
+        </article><article class="day-card">
+          <p class="t"><span class="time">18:00</span></p>
+          <p class="type">Reformer</p>
+          <p class="who">Nilay Kentkur</p>
+        </article>
+  </div><div class="day-panel" id="dpanel-car" role="tabpanel" aria-labelledby="dtab-car" hidden>
+    <article class="day-card">
+          <p class="t"><span class="time">18:00</span></p>
+          <p class="type">Reformer</p>
+          <p class="who">Damla</p>
+        </article><article class="day-card">
+          <p class="t"><span class="time">19:00</span><span class="badge-en">İngilizce</span></p>
+          <p class="type">Reformer</p>
+          
+        </article>
+  </div><div class="day-panel" id="dpanel-per" role="tabpanel" aria-labelledby="dtab-per" hidden>
+    <article class="day-card">
+          <p class="t"><span class="time">10:00</span></p>
+          <p class="type">Reformer</p>
+          <p class="who">Hilal</p>
+        </article><article class="day-card">
+          <p class="t"><span class="time">18:00</span></p>
+          <p class="type">Reformer</p>
+          <p class="who">Nilay Kentkur</p>
+        </article>
+  </div><div class="day-panel" id="dpanel-cum" role="tabpanel" aria-labelledby="dtab-cum" hidden>
+    <article class="day-card">
+          <p class="t"><span class="time">18:00</span></p>
+          <p class="type">Reformer</p>
+          <p class="who">Damla</p>
+        </article>
+  </div><div class="day-panel" id="dpanel-cmt" role="tabpanel" aria-labelledby="dtab-cmt" hidden>
+    <article class="day-card">
+          <p class="t"><span class="time">11:00</span></p>
+          <p class="type">Reformer</p>
+          <p class="who">Nilay Kentkur</p>
+        </article>
+  </div><div class="day-panel" id="dpanel-paz" role="tabpanel" aria-labelledby="dtab-paz" hidden>
+    <p class="sched-empty">Ders yok</p>
+  </div>
+    </div>
+
+    <p class="small muted price-note">Özel ve 2’li dersler bu saatlerin dışında, randevuyla planlanır.</p>
   </div>
 </section>
-
-<section id="paketler">
+<section class="section" id="yorumlar" aria-labelledby="yorumlar-h">
   <div class="wrap">
-    <div class="sec-head">
-      <h2 data-en="Packages">Paketler</h2>
-      <p data-en="Prices are not shown yet — send yours and they go in here.">Fiyatlar henüz girilmedi — sizden gelince buraya birebir işlenir.</p>
-    </div>
-    <div class="packs">
-      <div class="pack">
-        <h3 data-en="Trial class">Deneme dersi</h3>
-        <div class="amt" data-en="Ask">Sorun</div>
-        <p class="cond" data-en="One session. Level assessment and a look at whether the studio suits you.">Tek ders. Seviye değerlendirmesi ve stüdyonun size uyup uymadığına bakılır.</p>
+    <div class="section-head is-center">
+    <p class="eyebrow is-center" data-reveal="fade"><span class="num">09</span> Öğrenci Yorumları</p>
+    <h2 class="h2" id="yorumlar-h" data-reveal style="--d:60ms">Stüdyoda çalışanlar ne diyor?</h2>
+    
+  </div>
+    <div class="reviews-empty" data-reveal="fade">
+        <span class="badge">Yayına hazır alan</span>
+        <p>Google yorumları bu alana bağlanacak. Stüdyonun Google işletme profili paylaşıldığında gerçek yorumlar burada otomatik olarak listelenecek.</p>
+        
       </div>
-      <div class="pack hi">
-        <div class="best" data-en="Most chosen">En çok tercih edilen</div>
-        <h3 data-en="8 classes / month">Aylık 8 ders</h3>
-        <div class="amt" data-en="Ask">Sorun</div>
-        <p class="cond" data-en="Twice a week. The rhythm most people settle into.">Haftada iki gün. Çoğu kişinin oturduğu tempo.</p>
-      </div>
-      <div class="pack">
-        <h3 data-en="12 classes / month">Aylık 12 ders</h3>
-        <div class="amt" data-en="Ask">Sorun</div>
-        <p class="cond" data-en="Three times a week, for faster progress.">Haftada üç gün, daha hızlı ilerlemek için.</p>
-      </div>
-      <div class="pack">
-        <h3 data-en="One-to-one">Birebir</h3>
-        <div class="amt" data-en="Ask">Sorun</div>
-        <p class="cond" data-en="Private session. Usual choice for clinical and pregnancy work.">Özel ders. Klinik ve hamile çalışmalarında sık tercih edilir.</p>
-      </div>
-    </div>
   </div>
 </section>
-
-<section class="book" id="randevu">
-  <div class="wrap">
-    <div class="sec-head">
-      <h2 data-en="Book a trial class">Deneme dersi ayırt</h2>
-      <p data-en="Fill this in and the studio gets back to you with a time. No phone tag.">Formu doldurun, stüdyo size saat vererek dönsün. Telefonda kovalamaca yok.</p>
+<section class="section deep" id="iletisim" aria-labelledby="iletisim-h">
+  <div class="wrap wrap-wide">
+    <div class="section-head">
+      <p class="eyebrow" data-reveal="fade"><span class="num">10</span> İletişim</p>
+      <h2 class="h2" id="iletisim-h" data-reveal style="--d:60ms">Bize Ulaşın</h2>
+      <p class="lede" data-reveal style="--d:120ms">Ders programı, paketler veya size uygun başlangıç hakkında konuşmak için yazın.</p>
     </div>
 
-    <form class="form" id="form">
-      <div class="grid2">
-        <div class="field">
-          <label for="ders" data-en="Class">Ders</label>
-          <select id="ders" required>
-            <option value="" data-en="Choose a class…">Ders seçin…</option>
-            <option data-en="Equipment Pilates (Reformer · Cadillac)">Aletli Pilates (Reformer · Cadillac)</option>
-            <option data-en="Mat Pilates">Mat Pilates</option>
-            <option data-en="Clinical Pilates">Klinik Pilates</option>
-            <option data-en="Pregnancy Pilates">Hamile Pilatesi</option>
-            <option data-en="English Pilates Class">English Pilates Class</option>
-            <option data-en="One-to-one">Birebir</option>
-          </select>
-        </div>
-        <div class="field">
-          <label for="seviye" data-en="Experience">Deneyim</label>
-          <select id="seviye" required>
-            <option value="" data-en="Choose…">Seçin…</option>
-            <option data-en="Never done pilates">Hiç pilates yapmadım</option>
-            <option data-en="Some experience">Biraz deneyimim var</option>
-            <option data-en="Practise regularly">Düzenli yapıyorum</option>
-          </select>
-        </div>
+    <div class="contact">
+      <div class="channels" data-reveal="fade">
+        <a class="channel" href="https://www.google.com/maps/search/?api=1&query=Nilay%27s%20Pilates%20Studio%20Gaziosmanpa%C5%9Fa%20Ankara" target="_blank" rel="noopener noreferrer"><span class="k">Adres</span>
+      <span class="v">Beyaz Zambaklar Sok. 9/4<br>Gaziosmanpaşa, Ankara</span><svg class="arw" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 7h10M8 3l4 4-4 4"/></svg></a>
+        <div class="channel"><span class="k">Telefon</span>
+      <span class="v pending">Yakında eklenecek</span></div>
+        <div class="channel"><span class="k">WhatsApp</span>
+      <span class="v pending">Yakında eklenecek</span></div>
+        <a class="channel" href="https://instagram.com/nilayspilatesstudio" target="_blank" rel="noopener noreferrer"><span class="k">Instagram</span>
+      <span class="v">@nilayspilatesstudio</span><svg class="arw" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 7h10M8 3l4 4-4 4"/></svg></a>
+        <a class="channel" href="https://www.google.com/maps/search/?api=1&query=Nilay%27s%20Pilates%20Studio%20Gaziosmanpa%C5%9Fa%20Ankara" target="_blank" rel="noopener noreferrer"><span class="k">Google Maps</span>
+      <span class="v">Konumu Gör</span><svg class="arw" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 7h10M8 3l4 4-4 4"/></svg></a>
       </div>
 
-      <div class="field">
-        <label data-en="Preferred time">Tercih ettiğiniz saat</label>
-        <div class="slots" id="slots">
-          <button type="button" class="slot" aria-pressed="false">09:30</button>
-          <button type="button" class="slot" aria-pressed="false">11:00</button>
-          <button type="button" class="slot" aria-pressed="false">13:00</button>
-          <button type="button" class="slot" aria-pressed="false" disabled>17:00</button>
-          <button type="button" class="slot" aria-pressed="false">18:00</button>
-          <button type="button" class="slot" aria-pressed="false">19:30</button>
-        </div>
-      </div>
-
-      <div class="grid2">
-        <div class="field">
-          <label for="ad" data-en="Name">Ad Soyad</label>
-          <input id="ad" type="text" required placeholder="Nilay Yılmaz">
-        </div>
-        <div class="field">
-          <label for="tel" data-en="Phone">Telefon</label>
-          <input id="tel" type="tel" required placeholder="0555 000 00 00">
-        </div>
-      </div>
-
-      <div class="field">
-        <label for="not" data-en="Anything the instructor should know (optional)">Eğitmenin bilmesi gereken bir şey var mı? (isteğe bağlı)</label>
-        <textarea id="not" placeholder="Örn. 24. haftada hamileyim / bel fıtığım var / işten sonra ancak 19:00'da yetişebiliyorum" data-pl-en="e.g. I'm 24 weeks pregnant / I have a herniated disc / I can only make it after 19:00"></textarea>
-      </div>
-
-      <button class="submit" type="submit" data-en="Send the request">Talebi gönder</button>
-    </form>
-
-    <div class="done" id="done">
-      <h3 data-en="Request received">Talebiniz alındı</h3>
-      <p id="done-text" data-en="On a live site this would drop straight into the studio's inbox and phone. On this sample page nothing is sent.">Gerçek sitede bu talep doğrudan stüdyonun e-postasına ve telefonuna düşer. Bu örnek sayfada hiçbir yere gönderilmez.</p>
-    </div>
-  </div>
-</section>
-
-<section id="konum">
-  <div class="wrap">
-    <div class="info">
       <div>
-        <h3 data-en="Address">Adres</h3>
-        <p>Beyaz Zambaklar Sok. 9/4<br>Gaziosmanpaşa, Çankaya / Ankara</p>
-      </div>
-      <div>
-        <h3 data-en="Hours">Saatler</h3>
-        <p data-en="Mon–Fri 09:00 – 21:00<br>Sat 09:00 – 14:00<br><span style='color:#6B7A88'>Sample hours — to be confirmed</span>">Pzt–Cum 09:00 – 21:00<br>Cmt 09:00 – 14:00<br><span style="color:#6B7A88">Örnek saatler — teyit edilecek</span></p>
-      </div>
-      <div>
-        <h3 data-en="Contact">İletişim</h3>
-        <p><a href="https://instagram.com/nilayspilatesstudio">@nilayspilatesstudio</a><br><span style="color:#6B7A88" data-en="Phone to be added">Telefon eklenecek</span></p>
+        <form class="form" id="contact-form" novalidate>
+          <div class="form-grid">
+            <div class="field">
+              <label for="f-name">Ad Soyad</label>
+              <input id="f-name" name="name" type="text" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="f-phone">Telefon</label>
+              <input id="f-phone" name="phone" type="tel" autocomplete="tel" required>
+            </div>
+          </div>
+          <div class="field">
+            <label for="f-email">E-posta <span class="muted">(isteğe bağlı)</span></label>
+            <input id="f-email" name="email" type="email" autocomplete="email">
+          </div>
+          <div class="field">
+            <label for="f-msg">Mesaj</label>
+            <textarea id="f-msg" name="message" rows="4" placeholder="Hangi derse ilgi duyuyorsunuz, hangi saatler size uygun?"></textarea>
+          </div>
+          <button class="btn" type="submit">Gönder<svg class="arw" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 7h10M8 3l4 4-4 4"/></svg></button>
+        </form>
+
+        <div class="form-done" id="form-done" role="status" aria-live="polite">
+          <h3 class="h3">Mesajınız hazır</h3>
+          <p class="body">Form henüz bir gönderim adresine bağlı değil. Stüdyonun e-posta adresi eklendiğinde mesajlar doğrudan oraya iletilecek. Bu arada Instagram üzerinden yazabilirsiniz.</p>
+          <a class="link" href="https://instagram.com/nilayspilatesstudio" target="_blank" rel="noopener noreferrer">Instagram’dan yaz<svg class="arw" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 7h10M8 3l4 4-4 4"/></svg></a>
+        </div>
       </div>
     </div>
   </div>
 </section>
+</main>
 
-<footer>
+<section class="endcta wrap">
+  <p class="eyebrow is-center" data-reveal="fade">Başlamaya hazır mısınız?</p>
+  <h2 class="h2" data-reveal style="--d:60ms">İlk dersiniz için bize yazın.</h2>
+  <a class="btn" href="#iletisim" data-reveal style="--d:120ms">İletişime Geç<svg class="arw" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 7h10M8 3l4 4-4 4"/></svg></a>
+</section>
+
+<footer class="footer">
   <div class="wrap">
-    <p data-en="Sample page prepared for Nilay's Pilates Studio. Content, schedule and prices are placeholders until the studio confirms them.">Nilay's Pilates Studio için hazırlanmış örnek sayfadır. İçerik, program ve fiyatlar stüdyo teyit edene kadar yer tutucudur.</p>
+    <div class="footer-in">
+      <div>
+        <p class="brand"><span>Nilay&#39;s</span> <span class="ac">Pilates</span> <span>Studio</span></p>
+        <p class="small muted" style="margin-top:.35rem">Butik Pilates Stüdyosu • Ankara</p>
+      </div>
+      <nav class="footer-links" aria-label="İletişim">
+        <a href="https://instagram.com/nilayspilatesstudio" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="#iletisim">WhatsApp</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Nilay%27s%20Pilates%20Studio%20Gaziosmanpa%C5%9Fa%20Ankara" target="_blank" rel="noopener noreferrer">Google Maps</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Nilay’s Pilates Studio</p>
+      <p class="lang">
+        <a href="#" aria-current="true" hreflang="tr">TR</a>
+        <span class="sep">|</span>
+        <a href="en/" hreflang="en">EN</a>
+      </p>
+      <a class="link" href="#hero" style="border:0;padding:0"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 12V2M3 6l4-4 4 4"/></svg> Başa dön</a>
+    </div>
   </div>
 </footer>
+<dialog class="lb" id="lightbox" aria-label="Stüdyo">
+  <button class="lb-btn lb-close" type="button" data-lb-close aria-label="Kapat"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l10 10M14 4L4 14"/></svg></button>
+  <div>
+    <img id="lb-img" src="" alt="">
+    <p class="lb-cap" id="lb-cap"></p>
+  </div>
+  <div class="lb-nav">
+    <button class="lb-btn" type="button" data-lb-prev aria-label="Önceki"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4l-5 5 5 5"/></svg></button>
+    <button class="lb-btn" type="button" data-lb-next aria-label="Sonraki"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4l5 5-5 5"/></svg></button>
+  </div>
+</dialog>
+<a class="sticky-wa" id="sticky-wa" href="#iletisim" data-pending="whatsapp"
+   aria-label="WhatsApp’tan yaz"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.13a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.36c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.83 2.42a8.19 8.19 0 0 1 2.41 5.83c0 4.54-3.7 8.21-8.25 8.21Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.8-.79.97-.14.16-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.38-1.72-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.42h-.48c-.17 0-.43.06-.66.31-.23.25-.87.85-.87 2.07s.89 2.4 1.02 2.56c.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.14-1.18-.06-.11-.22-.17-.47-.29Z"/></svg><span class="lbl">WhatsApp’tan yaz</span></a>
 
-<script>
-  /* saat seçimi */
-  var slots = document.getElementById('slots');
-  slots.addEventListener('click', function(e){
-    var b = e.target.closest('.slot');
-    if(!b || b.disabled) return;
-    slots.querySelectorAll('.slot').forEach(function(s){ s.setAttribute('aria-pressed','false'); });
-    b.setAttribute('aria-pressed','true');
-  });
-
-  /* form */
-  document.getElementById('form').addEventListener('submit', function(e){
-    e.preventDefault();
-    var t = slots.querySelector('.slot[aria-pressed="true"]');
-    if(!t){ alert(lang === 'en' ? 'Please pick a time.' : 'Lütfen bir saat seçin.'); return; }
-    this.style.display = 'none';
-    var d = document.getElementById('done');
-    d.classList.add('on');
-    d.scrollIntoView({behavior:'smooth', block:'center'});
-  });
-
-  /* TR / EN */
-  var lang = 'tr';
-  var nodes = document.querySelectorAll('[data-en]');
-  nodes.forEach(function(n){ n.setAttribute('data-tr', n.tagName === 'OPTION' ? n.textContent : n.innerHTML); });
-  var pl = document.querySelectorAll('[data-pl-en]');
-  pl.forEach(function(n){ n.setAttribute('data-pl-tr', n.getAttribute('placeholder')); });
-
-  function setLang(next){
-    lang = next;
-    document.documentElement.lang = next;
-    nodes.forEach(function(n){
-      var v = next === 'en' ? n.getAttribute('data-en') : n.getAttribute('data-tr');
-      if(v === null) return;
-      if(n.tagName === 'OPTION'){ n.textContent = v; } else { n.innerHTML = v; }
-    });
-    pl.forEach(function(n){
-      n.setAttribute('placeholder', next === 'en' ? n.getAttribute('data-pl-en') : n.getAttribute('data-pl-tr'));
-    });
-    document.getElementById('btn-tr').setAttribute('aria-pressed', String(next === 'tr'));
-    document.getElementById('btn-en').setAttribute('aria-pressed', String(next === 'en'));
-  }
-  document.getElementById('btn-tr').addEventListener('click', function(){ setLang('tr'); });
-  document.getElementById('btn-en').addEventListener('click', function(){ setLang('en'); });
-</script>
+<script src="assets/js/app.js?v=7b8ef2d2" defer></script>
 </body>
 </html>

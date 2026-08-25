@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="gders" gradientTransform="rotate(32.0)">
+      <stop offset="0" stop-color="#F7F3EC"/><stop offset="1" stop-color="#DBD1C0"/>
+    </linearGradient>
+    <linearGradient id="lders" x1="0" y1="0" x2="0.4" y2="1">
+      <stop offset="0" stop-color="#FFFDF8" stop-opacity=".85"/>
+      <stop offset="1" stop-color="#FFFDF8" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="nders" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#gders)"/>
+  <g opacity=".55"><path d="M263.95840794593096 0 L679.958407945931 0 L1095.958407945931 1000 L359.95840794593096 1000 Z" fill="url(#lders)"/></g>
+  
+  
+  <g transform="translate(370.0 70.0) scale(8.6000)" opacity="0.3"><path d="M6 70 H94 M6 76 H94 M6 70 V80 M94 70 V80" fill="none" stroke="#26241F" stroke-width="0.55" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 60 h22 v10 h-22 z M58 60 h22 v10 h-22 z" fill="none" stroke="#26241F" stroke-width="0.55" stroke-linecap="round" stroke-linejoin="round"/><path d="M31 60 V48 M31 48 a5 5 0 1 0 0.01 0" fill="none" stroke="#26241F" stroke-width="0.55" stroke-linecap="round" stroke-linejoin="round"/><path d="M69 60 V48 M69 48 a5 5 0 1 0 0.01 0" fill="none" stroke="#26241F" stroke-width="0.55" stroke-linecap="round" stroke-linejoin="round"/><path d="M26 54 h10 M64 54 h10" fill="none" stroke="#26241F" stroke-width="0.4" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <rect width="1600" height="1000" filter="url(#nders)" opacity=".07" style="mix-blend-mode:multiply"/>
+  
+</svg>
