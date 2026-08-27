@@ -12,11 +12,29 @@ import { resolve, dirname, join, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { page } from './templates/page.mjs';
 import { site } from './data/site.js';
-import { isSample } from './data/schedule.js';
+import { isSample, days } from './data/schedule.js';
 import { reviews, googleReviewsUrl } from './data/reviews.js';
 import { pricing } from './data/pricing.js';
+import { gallery, figures } from './data/gallery.js';
+import { team } from './data/team.js';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
+
+/* JPEG SOF işaretinden width/height okur (harici bağımlılık yok). */
+function jpegDims(buf) {
+  let i = 2;
+  while (i < buf.length) {
+    if (buf[i] !== 0xff) { i++; continue; }
+    const marker = buf[i + 1];
+    if (marker === 0xd8 || marker === 0x01 || (marker >= 0xd0 && marker <= 0xd7)) { i += 2; continue; }
+    if (marker === 0xd9 || marker === 0xda) break;
+    const len = buf.readUInt16BE(i + 2);
+    const isSOF = marker >= 0xc0 && marker <= 0xcf && marker !== 0xc4 && marker !== 0xc8 && marker !== 0xcc;
+    if (isSOF) return { h: buf.readUInt16BE(i + 5), w: buf.readUInt16BE(i + 7) };
+    i += 2 + len;
+  }
+  return null;
+}
 
 /* Her görsel için: boyut (CLS önlemek üzere width/height) + içerik hash'i
    (aynı dosya adıyla gerçek fotoğraf konduğunda önbellek kırılsın diye). */
@@ -31,6 +49,9 @@ function collectDims(dir, out = {}) {
       const head = buf.toString('utf8').slice(0, 600);
       const w = head.match(/\bwidth="(\d+)"/), h = head.match(/\bheight="(\d+)"/);
       if (w && h) { entry.w = w[1]; entry.h = h[1]; }
+    } else if (name.endsWith('.jpg') || name.endsWith('.jpeg')) {
+      const d = jpegDims(buf);
+      if (d) { entry.w = d.w; entry.h = d.h; }
     }
     out[key] = entry;
   }
@@ -97,7 +118,12 @@ if (isSample) todo.push('src/data/schedule.js — gerçek haftalık program (şu
 if (!reviews.length) todo.push('src/data/reviews.js — Google yorumları (bölüm boş durumda)');
 if (!googleReviewsUrl) todo.push('src/data/reviews.js — Google işletme profili linki');
 if (!pricing.some((p) => p.tiers.some((t) => t.en))) todo.push('src/data/pricing.js — İngilizce sayfa için ayrı fiyat (şu an TR fiyatları gösteriliyor)');
-todo.push('assets/img/studio/*, assets/img/team/* — gerçek stüdyo ve portre fotoğrafları');
+const placeholderShots = gallery.filter((g) => g.placeholder).map((g) => g.category.tr);
+if (placeholderShots.length) todo.push(`assets/img/studio/* — eksik galeri kategorileri: ${placeholderShots.join(', ')}`);
+if (figures.approach.placeholder) todo.push('assets/img/studio/yaklasim — "Yaklaşımımız" bölümü için bir görsel (isteğe bağlı)');
+if (team.some((m) => m.ext === 'svg')) todo.push('assets/img/team/* — eğitmen portreleri (şu an tamamı yer tutucu)');
+if (days.some((d) => d.sessions.some((s) => !s.time))) todo.push('src/data/schedule.js — Cumartesi saati belirtilmedi');
+if (days.every((d) => d.sessions.every((s) => !s.instructor))) todo.push('src/data/schedule.js — hangi dersi hangi eğitmenin verdiği belirtilmedi');
 
 console.log('\nStüdyodan beklenen bilgiler:');
 todo.forEach((x) => console.log('  ·', x));

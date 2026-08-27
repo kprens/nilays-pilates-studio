@@ -418,6 +418,7 @@ h1,h2,h3,.display{
 .slot-row{display:flex; flex-wrap:wrap; gap:.5rem 1.75rem; align-items:baseline}
 .slot-row + .slot-row{margin-top:.85rem; padding-top:.85rem; border-top:1px dotted var(--line)}
 .slot-time{font-variant-numeric:tabular-nums; font-weight:600; font-size:.9375rem; min-width:3.5rem}
+.is-tbd .slot-time,.is-tbd .time{font-style:italic; font-weight:500; color:var(--muted); font-variant-numeric:normal; letter-spacing:0}
 .slot-type{font-size:.9375rem; color:var(--ink-2)}
 .slot-who{font-size:.8125rem; color:var(--muted); margin-left:auto}
 .badge-en{font-size:.5625rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--clay); border:1px solid var(--clay); padding:.2rem .4rem; line-height:1; border-radius:1px}

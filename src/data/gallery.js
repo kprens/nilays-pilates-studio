@@ -1,21 +1,26 @@
 /* ---------------------------------------------------------------------------
    STÜDYO GALERİSİ
-   Şu an gerçek fotoğraf yok; her kayıt yer tutucu bir görsele işaret ediyor.
-   Gerçek fotoğraf geldiğinde: dosyayı assets/img/studio/ içine koyun,
-   `src` değerini o dosyanın uzantısız adıyla, `ext` değerini uzantısıyla
-   değiştirin. Başka hiçbir yeri düzenlemeniz gerekmez.
+   Nilay Hanım'ın 26 Ağu 2026'da gönderdiği gerçek stüdyo fotoğrafları.
+
+   Dokümandaki kategorilerden Tower, Chair (tek başına) ve gerçek bir ders
+   anı için henüz temiz bir kare yok — o kategoriler şimdilik yer tutucuda
+   kaldı. Cadillac fotoğrafının içinde bir Wunda Chair de görünüyor ama tek
+   başına net bir kare olmadığı için ayrı kategori olarak eklenmedi.
+
+   Yeni fotoğraf geldiğinde: dosyayı assets/img/studio/ içine koyun, ilgili
+   kaydın `src`/`ext` alanını güncelleyin, `placeholder` satırını silin.
 
    `span` galeri ızgarasındaki yerleşimi belirler: 'wide' | 'tall' | 'std'
 --------------------------------------------------------------------------- */
 
 export const gallery = [
   {
-    src: 'genel-gorunum', ext: 'svg', span: 'wide', placeholder: true,
+    src: 'genel-gorunum-2', ext: 'jpg', span: 'wide',
     category: { tr: 'Genel Görünüm', en: 'The Space' },
-    alt: { tr: 'Stüdyonun genel görünümü', en: 'General view of the studio' },
+    alt: { tr: 'Stüdyonun ana reformer salonu', en: 'The studio’s main reformer room' },
   },
   {
-    src: 'reformer', ext: 'svg', span: 'tall', placeholder: true,
+    src: 'reformer', ext: 'jpg', span: 'tall',
     category: { tr: 'Reformer', en: 'Reformer' },
     alt: { tr: 'Stüdyodaki reformer ekipmanları', en: 'Reformer equipment in the studio' },
   },
@@ -25,9 +30,9 @@ export const gallery = [
     alt: { tr: 'Tower ekipmanı', en: 'Tower equipment' },
   },
   {
-    src: 'cadillac', ext: 'svg', span: 'std', placeholder: true,
+    src: 'cadillac', ext: 'jpg', span: 'std',
     category: { tr: 'Cadillac', en: 'Cadillac' },
-    alt: { tr: 'Cadillac ekipmanı', en: 'Cadillac equipment' },
+    alt: { tr: 'Cadillac ekipmanının bulunduğu çalışma alanı', en: 'The room housing the Cadillac equipment' },
   },
   {
     src: 'chair', ext: 'svg', span: 'std', placeholder: true,
@@ -35,9 +40,9 @@ export const gallery = [
     alt: { tr: 'Chair ekipmanı', en: 'Chair equipment' },
   },
   {
-    src: 'detay', ext: 'svg', span: 'std', placeholder: true,
+    src: 'detay', ext: 'jpg', span: 'std',
     category: { tr: 'Detaylar', en: 'Details' },
-    alt: { tr: 'Stüdyodan detay', en: 'A detail from the studio' },
+    alt: { tr: 'Stüdyodan bir duvar detayı', en: 'A wall detail from the studio' },
   },
   {
     src: 'ders', ext: 'svg', span: 'wide', placeholder: true,
@@ -45,21 +50,26 @@ export const gallery = [
     alt: { tr: 'Stüdyoda süren bir ders', en: 'A class in progress at the studio' },
   },
   {
-    src: 'giris', ext: 'svg', span: 'std', placeholder: true,
-    category: { tr: 'Giriş', en: 'Entrance' },
-    alt: { tr: 'Stüdyo girişi', en: 'The studio entrance' },
+    src: 'soyunma-alani', ext: 'jpg', span: 'std',
+    category: { tr: 'Soyunma Alanı', en: 'Changing Area' },
+    alt: { tr: 'Stüdyonun soyunma ve dolap alanı', en: 'The studio’s changing area and lockers' },
   },
   {
-    src: 'atmosfer', ext: 'svg', span: 'tall', placeholder: true,
+    src: 'atmosfer', ext: 'jpg', span: 'tall',
     category: { tr: 'Atmosfer', en: 'Atmosphere' },
-    alt: { tr: 'Stüdyonun atmosferi', en: 'The atmosphere of the studio' },
+    alt: { tr: 'Dinlenme köşesi', en: 'A quiet lounge corner' },
+  },
+  {
+    src: 'banyo', ext: 'jpg', span: 'std',
+    category: { tr: 'Banyo', en: 'Bathroom' },
+    alt: { tr: 'Stüdyonun banyosu', en: 'The studio’s bathroom' },
   },
 ];
 
 /* Hero ve bölüm görselleri (galeri dışı) */
 export const figures = {
-  hero:     { src: 'hero',        ext: 'svg', placeholder: true,
-              alt: { tr: 'Nilay’s Pilates Studio — stüdyo alanı', en: 'Nilay’s Pilates Studio — the studio space' } },
+  hero:     { src: 'hero',        ext: 'jpg',
+              alt: { tr: 'Nilay’s Pilates Studio — ana reformer salonu', en: 'Nilay’s Pilates Studio — the main reformer room' } },
   approach: { src: 'yaklasim',    ext: 'svg', placeholder: true,
               alt: { tr: 'Hareket üzerine çalışılan stüdyo alanı', en: 'The studio space where movement is practised' } },
 };

@@ -99,10 +99,10 @@ export const classes = {
         },
       ],
       cta: { label: { tr: 'Ders Programını Gör', en: 'See the Schedule' }, href: '#program' },
-      image: 'studio/reformer-grup',
+      image: { dir: 'studio', src: 'genel-gorunum-2', ext: 'jpg' },
       alt: {
-        tr: 'Stüdyodaki reformer grup dersi alanı',
-        en: 'The reformer group class area in the studio',
+        tr: 'Stüdyonun reformer grup dersi salonu',
+        en: 'The studio’s reformer group class room',
       },
     },
     {
@@ -131,10 +131,10 @@ export const classes = {
         label: { tr: 'Özel Pilates Derslerini Keşfet', en: 'Explore Private Sessions' },
         href: '#paketler',
       },
-      image: 'studio/ozel-ders',
+      image: { dir: 'studio', src: 'cadillac', ext: 'jpg' },
       alt: {
-        tr: 'Birebir özel Pilates dersinin yapıldığı alan',
-        en: 'The area used for one-to-one private Pilates sessions',
+        tr: 'Cadillac ekipmanının bulunduğu sakin çalışma alanı',
+        en: 'The quiet room housing the Cadillac equipment',
       },
     },
   ],

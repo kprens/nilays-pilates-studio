@@ -93,7 +93,7 @@ export const classes = (ctx) => {
   <div class="wrap">
     ${head(ctx, { index: s.index, kicker: s.kicker, title: s.title, id: 'dersler-h' })}
     ${map(s.items, (it, i) => `<article class="class-row${i % 2 ? ' flip' : ''}">
-      ${fig(ctx, { ...it, src: it.image.split('/')[1], dir: it.image.split('/')[0], ext: 'svg', placeholder: true }, { delay: 40 })}
+      ${fig(ctx, { ...it, src: it.image.src, dir: it.image.dir, ext: it.image.ext, placeholder: it.image.placeholder }, { delay: 40 })}
       <div>
         <p class="class-label" data-reveal="fade">${esc(t(it.label, l))}</p>
         <p class="class-name" data-reveal="fade"${d(40)}>${esc(t(it.name, l))}</p>
@@ -259,12 +259,14 @@ export const schedule = (ctx) => {
   const L = s.labels;
   const enBadge = `<span class="badge-en">${esc(t(L.english, l))}</span>`;
 
+  const timeLabel = (ss) => (ss.time ? ss.time : t(S.timeTbdLabel, l));
+
   const rows = map(S.days, (day) => `<tr>
     <th scope="row">${esc(t(day.name, l))}</th>
     <td>${day.sessions.length === 0
       ? `<span class="sched-empty">${esc(t(L.closed, l))}</span>`
-      : map(day.sessions, (ss) => `<span class="slot-row">
-          <span class="slot-time">${esc(ss.time)}</span>
+      : map(day.sessions, (ss) => `<span class="slot-row${ss.time ? '' : ' is-tbd'}">
+          <span class="slot-time">${esc(timeLabel(ss))}</span>
           <span class="slot-type">${esc(t(ss.type, l))}</span>
           ${ss.language === 'en' ? enBadge : ''}
           <span class="slot-who">${esc(ss.instructor || '')}</span>
@@ -279,8 +281,8 @@ export const schedule = (ctx) => {
   const panels = map(S.days, (day, i) => `<div class="day-panel" id="dpanel-${day.id}" role="tabpanel" aria-labelledby="dtab-${day.id}"${i === 0 ? '' : ' hidden'}>
     ${day.sessions.length === 0
       ? `<p class="sched-empty">${esc(t(L.closed, l))}</p>`
-      : map(day.sessions, (ss) => `<article class="day-card">
-          <p class="t"><span class="time">${esc(ss.time)}</span>${ss.language === 'en' ? enBadge : ''}</p>
+      : map(day.sessions, (ss) => `<article class="day-card${ss.time ? '' : ' is-tbd'}">
+          <p class="t"><span class="time">${esc(timeLabel(ss))}</span>${ss.language === 'en' ? enBadge : ''}</p>
           <p class="type">${esc(t(ss.type, l))}</p>
           ${when(ss.instructor, `<p class="who">${esc(ss.instructor)}</p>`)}
         </article>`)}
