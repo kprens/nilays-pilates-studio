@@ -261,17 +261,22 @@ export const schedule = (ctx) => {
 
   const timeLabel = (ss) => (ss.time ? ss.time : t(S.timeTbdLabel, l));
 
-  const rows = map(S.days, (day) => `<tr>
-    <th scope="row">${esc(t(day.name, l))}</th>
-    <td>${day.sessions.length === 0
-      ? `<span class="sched-empty">${esc(t(L.closed, l))}</span>`
-      : map(day.sessions, (ss) => `<span class="slot-row${ss.time ? '' : ' is-tbd'}">
-          <span class="slot-time">${esc(timeLabel(ss))}</span>
-          <span class="slot-type">${esc(t(ss.type, l))}</span>
-          ${ss.language === 'en' ? enBadge : ''}
-          <span class="slot-who">${esc(ss.instructor || '')}</span>
-        </span>`)}</td>
-  </tr>`);
+  const columns = map(S.days, (day, i) => `<div class="week-day${day.sessions.length ? '' : ' is-empty'}" data-reveal${d(i * 55)}>
+    <div class="week-day-h">
+      <span class="week-day-name">${esc(t(day.name, l))}</span>
+      <span class="week-day-count">${day.sessions.length || '—'}</span>
+    </div>
+    ${day.sessions.length === 0
+      ? `<p class="week-empty">${esc(t(L.closed, l))}</p>`
+      : `<div class="week-slots">${map(day.sessions, (ss) => `<div class="week-slot${ss.time ? '' : ' is-tbd'}">
+          <span class="week-time">${esc(timeLabel(ss))}</span>
+          <span class="week-meta">
+            <span class="week-type">${esc(t(ss.type, l))}</span>
+            ${ss.language === 'en' ? enBadge : ''}
+            ${when(ss.instructor, `<span class="week-who">${esc(ss.instructor)}</span>`)}
+          </span>
+        </div>`)}</div>`}
+  </div>`);
 
   const tabs = map(S.days, (day, i) => `<button class="day-tab" type="button" role="tab" id="dtab-${day.id}"
     aria-controls="dpanel-${day.id}" aria-selected="${i === 0}" tabindex="${i === 0 ? 0 : -1}">
@@ -294,15 +299,9 @@ export const schedule = (ctx) => {
 
     ${when(S.isSample, `<p class="sched-note" data-reveal="fade">${icon.info}<span>${esc(t(S.sampleNote, l))}</span></p>`)}
 
-    <div class="sched-desktop" data-reveal="fade">
-      <table class="sched-week">
-        <caption class="sr">${esc(t(s.title, l))}</caption>
-        <thead><tr>
-          <th scope="col">${esc(t(L.day, l))}</th>
-          <th scope="col">${esc(t(L.time, l))} · ${esc(t(L.type, l))} · ${esc(t(L.instructor, l))}</th>
-        </tr></thead>
-        <tbody>${rows}</tbody>
-      </table>
+    <div class="sched-desktop">
+      <h3 class="sr">${esc(t(s.title, l))}</h3>
+      <div class="week-grid">${columns}</div>
     </div>
 
     <div class="sched-mobile" data-sched>

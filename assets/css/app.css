@@ -406,21 +406,31 @@ h1,h2,h3,.display{
 .sched-note svg{flex:none; margin-top:.2rem; color:var(--clay)}
 
 .sched-desktop{display:none}
-.sched-week{width:100%; border-collapse:collapse; border:1px solid var(--line); background:var(--paper-2)}
-.sched-week th,.sched-week td{text-align:left; padding:1.1rem 1.25rem; border-bottom:1px solid var(--line-2); vertical-align:top}
-.sched-week tbody tr:last-child th,.sched-week tbody tr:last-child td{border-bottom:0}
-.sched-week thead th{
-  font-size:.625rem; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:var(--muted);
-  padding-block:.9rem; border-bottom:1px solid var(--line);
+
+/* Haftalık ızgara: her gün kendi sütunu, saatler dikey sıralı — gerçek bir
+   stüdyo panosu gibi taranır. Seam-border tekniği .tiers ile aynı. */
+.week-grid{
+  display:grid; grid-template-columns:repeat(7,minmax(0,1fr)); gap:1px;
+  background:var(--line); border:1px solid var(--line);
 }
-.sched-week tbody th{font-family:var(--display); font-weight:400; font-size:1.125rem; letter-spacing:-.01em; white-space:nowrap; width:11rem}
-.sched-week tr:hover td,.sched-week tr:hover th{background:#fff}
-.slot-row{display:flex; flex-wrap:wrap; gap:.5rem 1.75rem; align-items:baseline}
-.slot-row + .slot-row{margin-top:.85rem; padding-top:.85rem; border-top:1px dotted var(--line)}
-.slot-time{font-variant-numeric:tabular-nums; font-weight:600; font-size:.9375rem; min-width:3.5rem}
-.is-tbd .slot-time,.is-tbd .time{font-style:italic; font-weight:500; color:var(--muted); font-variant-numeric:normal; letter-spacing:0}
-.slot-type{font-size:.9375rem; color:var(--ink-2)}
-.slot-who{font-size:.8125rem; color:var(--muted); margin-left:auto}
+.week-day{background:var(--paper-2); padding:1.5rem 1.15rem; display:flex; flex-direction:column; gap:1.15rem; transition:background-color .35s var(--ease)}
+.week-day:hover{background:#fff}
+.week-day-h{padding-bottom:.9rem; border-bottom:1px solid var(--line)}
+.week-day-name{display:block; font-family:var(--display); font-size:1.0625rem; font-weight:400; letter-spacing:-.01em}
+.week-day-count{display:block; margin-top:.3rem; font-size:.6875rem; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:var(--clay); font-variant-numeric:tabular-nums}
+.week-day.is-empty .week-day-count{color:var(--muted)}
+
+.week-slots{display:flex; flex-direction:column; gap:.75rem}
+.week-slot{display:flex; flex-direction:column; gap:.2rem; padding-bottom:.75rem; border-bottom:1px dotted var(--line-2)}
+.week-slot:last-child{border-bottom:0; padding-bottom:0}
+.week-time{font-family:var(--display); font-size:1.3125rem; font-weight:400; letter-spacing:-.01em; font-variant-numeric:tabular-nums; transition:color .25s}
+.week-day:hover .week-slot .week-time{color:var(--clay)}
+.week-meta{display:flex; flex-wrap:wrap; align-items:center; gap:.4rem .5rem}
+.week-type{font-size:.75rem; color:var(--muted)}
+.week-who{font-size:.6875rem; color:var(--muted)}
+.is-tbd .week-time{font-style:italic; font-weight:400; color:var(--muted); font-family:var(--sans); font-size:.8125rem}
+
+.week-empty{color:var(--muted); font-size:.8125rem; font-style:italic}
 .badge-en{font-size:.5625rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--clay); border:1px solid var(--clay); padding:.2rem .4rem; line-height:1; border-radius:1px}
 .sched-empty{color:var(--muted); font-size:var(--fs-small); font-style:italic}
 
@@ -443,7 +453,7 @@ h1,h2,h3,.display{
 .day-card .time{font-family:var(--display); font-size:1.375rem; font-weight:400; font-variant-numeric:tabular-nums; letter-spacing:-.01em}
 .day-card .type{font-size:.9375rem; color:var(--ink-2)}
 .day-card .who{font-size:.8125rem; color:var(--muted)}
-@media (min-width:56rem){
+@media (min-width:64rem){
   .sched-desktop{display:block}
   .sched-mobile{display:none}
 }
