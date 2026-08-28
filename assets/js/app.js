@@ -209,11 +209,29 @@
     const f = $('#contact-form');
     const done = $('#form-done');
     if (!f || !done) return;
-    if (f.getAttribute('action')) return;    // gerçek uç nokta bağlıysa normal gönderim
+    if (f.getAttribute('action')) return;    // gerçek uç nokta (formEndpoint) varsa normal gönderim, JS'e hiç dokunmaz
+
+    const waNumber = f.dataset.wa;
 
     f.addEventListener('submit', (e) => {
       e.preventDefault();
       if (!f.reportValidity()) return;
+
+      if (waNumber) {
+        /* Doldurulan her alanı "Etiket: değer" satırına çevirir, boş
+           (isteğe bağlı) alanları atlar — hazır bir WhatsApp mesajı kurar. */
+        const lines = $$('[data-wa-label]', f)
+          .map((el) => [el.dataset.waLabel, el.value.trim()])
+          .filter(([, v]) => v)
+          .map(([label, v]) => `${label}: ${v}`);
+        const text = [f.dataset.waIntro, '', ...lines].join('\n');
+        const waLink = `https://wa.me/${waNumber}?text=${encodeURIComponent(text)}`;
+
+        const link = $('#form-done-link');
+        if (link) link.href = waLink;
+        window.open(waLink, '_blank', 'noopener');
+      }
+
       f.style.display = 'none';
       done.classList.add('on');
       done.scrollIntoView({ block: 'center', behavior: reduced ? 'auto' : 'smooth' });

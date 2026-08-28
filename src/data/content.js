@@ -299,12 +299,20 @@ export const contactSection = {
     },
     submit: { tr: 'Gönder', en: 'Send' },
     optional: { tr: 'isteğe bağlı', en: 'optional' },
-    successTitle: { tr: 'Mesajınız hazır', en: 'Your message is ready' },
-    successBody: {
-      tr: 'Form henüz bir gönderim adresine bağlı değil. Stüdyonun e-posta adresi eklendiğinde mesajlar doğrudan oraya iletilecek. Bu arada Instagram üzerinden yazabilirsiniz.',
-      en: 'The form is not connected to a delivery address yet. Once the studio’s email address is added, messages will be sent straight there. In the meantime you can write to us on Instagram.',
+    /* Form artık bir e-posta servisine değil, doğrudan WhatsApp'a gidiyor
+       (site.formEndpoint hâlâ boşken). waIntro, WhatsApp'ta açılan hazır
+       mesajın ilk satırı; diğer alan etiketleri (name/phone/email/message)
+       aynı mesajın satır başlıklarında da kullanılıyor. */
+    waIntro: {
+      tr: 'Merhaba, sitenizdeki formdan yazıyorum.',
+      en: 'Hello, I’m writing from the form on your website.',
     },
-    successCta: { tr: 'Instagram’dan yaz', en: 'Message on Instagram' },
+    successTitle: { tr: 'WhatsApp açılıyor', en: 'Opening WhatsApp' },
+    successBody: {
+      tr: 'Mesajınız hazırlandı. Yeni açılan pencerede WhatsApp üzerinden göndermeniz yeterli.',
+      en: 'Your message is ready. Just send it from the WhatsApp window that opened.',
+    },
+    successCta: { tr: 'Açılmadıysa buraya tıklayın', en: 'Click here if it didn’t open' },
   },
 };
 

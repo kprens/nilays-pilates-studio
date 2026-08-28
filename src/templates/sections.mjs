@@ -387,24 +387,26 @@ export const contact = (ctx) => {
       </div>
 
       <div>
-        <form class="form" id="contact-form" novalidate${site.formEndpoint ? ` action="${site.formEndpoint}" method="post"` : ''}>
+        <form class="form" id="contact-form" novalidate
+          ${site.formEndpoint ? `action="${site.formEndpoint}" method="post"` : ''}
+          ${!site.formEndpoint && site.whatsapp ? `data-wa="${site.whatsapp}" data-wa-intro="${esc(t(F.waIntro, l))}"` : ''}>
           <div class="form-grid">
             <div class="field">
               <label for="f-name">${esc(t(F.name, l))}</label>
-              <input id="f-name" name="name" type="text" autocomplete="name" required>
+              <input id="f-name" name="name" type="text" autocomplete="name" required data-wa-label="${esc(t(F.name, l))}">
             </div>
             <div class="field">
               <label for="f-phone">${esc(t(F.phone, l))}</label>
-              <input id="f-phone" name="phone" type="tel" autocomplete="tel" required>
+              <input id="f-phone" name="phone" type="tel" autocomplete="tel" required data-wa-label="${esc(t(F.phone, l))}">
             </div>
           </div>
           <div class="field">
             <label for="f-email">${esc(t(F.email, l))} <span class="muted">(${esc(t(F.optional, l))})</span></label>
-            <input id="f-email" name="email" type="email" autocomplete="email">
+            <input id="f-email" name="email" type="email" autocomplete="email" data-wa-label="${esc(t(F.email, l))}">
           </div>
           <div class="field">
             <label for="f-msg">${esc(t(F.message, l))}</label>
-            <textarea id="f-msg" name="message" rows="4" placeholder="${esc(t(F.messagePlaceholder, l))}"></textarea>
+            <textarea id="f-msg" name="message" rows="4" placeholder="${esc(t(F.messagePlaceholder, l))}" data-wa-label="${esc(t(F.message, l))}"></textarea>
           </div>
           <button class="btn" type="submit">${esc(t(F.submit, l))}${icon.arrow}</button>
         </form>
@@ -412,7 +414,7 @@ export const contact = (ctx) => {
         <div class="form-done" id="form-done" role="status" aria-live="polite">
           <h3 class="h3">${esc(t(F.successTitle, l))}</h3>
           <p class="body">${esc(t(F.successBody, l))}</p>
-          <a class="link" href="${site.instagram.url}" target="_blank" rel="noopener noreferrer">${esc(t(F.successCta, l))}${icon.arrow}</a>
+          <a class="link" id="form-done-link" href="${site.whatsapp ? `https://wa.me/${site.whatsapp}` : site.instagram.url}" target="_blank" rel="noopener noreferrer">${esc(t(F.successCta, l))}${icon.arrow}</a>
         </div>
       </div>
     </div>

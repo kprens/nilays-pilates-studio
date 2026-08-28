@@ -113,7 +113,9 @@ const todo = [];
 if (!site.phone) todo.push('site.phone — telefon numarası (iletişim satırı + tel: linki)');
 if (!site.whatsapp) todo.push('site.whatsapp — WhatsApp numarası (sabit buton + footer linki)');
 if (!site.email) todo.push('site.email — e-posta');
-if (!site.formEndpoint) todo.push('site.formEndpoint — iletişim formunun gönderim adresi');
+/* Form endpoint yoksa ama WhatsApp varsa form zaten çalışıyor (doğrudan
+   WhatsApp'a gidiyor) — bu artık eksik değil, sadece bir tercih notu. */
+if (!site.formEndpoint && !site.whatsapp) todo.push('site.formEndpoint ya da site.whatsapp — iletişim formu şu an hiçbir yere gitmiyor');
 if (isSample) todo.push('src/data/schedule.js — gerçek haftalık program (şu an örnek)');
 if (!reviews.length) todo.push('src/data/reviews.js — Google yorumları (bölüm boş durumda)');
 if (!googleReviewsUrl) todo.push('src/data/reviews.js — Google işletme profili linki');
