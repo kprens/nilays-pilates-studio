@@ -29,7 +29,9 @@ export const site = {
   // ——— Stüdyodan beklenen bilgiler ———
   phone: { e164: '+905326956653', display: '0532 695 66 53' },
   whatsapp: '905326956653', // Nilay Hanım: telefon ve WhatsApp aynı numara
-  email: null,            // örn. 'merhaba@nilayspilates.com'
+  // Nilay Hanım'ın 28 Ağu'da yazdığı adres — kişisel mi iş e-postası mı
+  // olduğu teyit edilmedi (Alperen'in kendi notu). Yanlışsa değiştir.
+  email: 'nilaykentkur@gmail.com',
   hours: null,            // örn. [{ days:{tr:'Pzt–Cum',en:'Mon–Fri'}, time:'09:00 – 21:00' }]
 
   instagram: { handle: '@nilayspilatesstudio', url: 'https://instagram.com/nilayspilatesstudio' },

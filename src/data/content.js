@@ -274,6 +274,7 @@ export const contactSection = {
   channels: {
     phone: { tr: 'Telefon', en: 'Phone' },
     whatsapp: { tr: 'WhatsApp', en: 'WhatsApp' },
+    email: { tr: 'E-posta', en: 'Email' },
     instagram: { tr: 'Instagram', en: 'Instagram' },
     maps: { tr: 'Google Maps', en: 'Google Maps' },
     address: { tr: 'Adres', en: 'Address' },

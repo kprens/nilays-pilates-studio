@@ -379,6 +379,9 @@ export const contact = (ctx) => {
         ${site.whatsapp
           ? row(t(ch.whatsapp, l), esc(site.phone ? site.phone.display : 'WhatsApp'), `https://wa.me/${site.whatsapp}`)
           : row(t(ch.whatsapp, l), esc(t(ch.pending, l)), null, true)}
+        ${site.email
+          ? row(t(ch.email, l), esc(site.email), `mailto:${site.email}`)
+          : row(t(ch.email, l), esc(t(ch.pending, l)), null, true)}
         ${row(t(ch.instagram, l), esc(site.instagram.handle), site.instagram.url)}
         ${row(t(ch.maps, l), esc(t(C.studio.cta, l)), site.address.mapsUrl)}
       </div>
