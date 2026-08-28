@@ -12,5 +12,9 @@
 
 export const reviews = [];
 
-/* Google işletme profili linki geldiğinde buraya yazın; boşken buton çıkmaz. */
-export const googleReviewsUrl = null;
+/* Nilay Hanım'ın 29 Ağu'da paylaştığı link. Not: bu bir "/review" sonlu
+   g.page kısa linki — tıklanınca doğrudan yorum YAZMA ekranını açar,
+   mevcut yorumları listelemez (Google bu iki işlevi ayrı linkte tutuyor).
+   O yüzden CTA metni content.js'te "yorum bırakın" olarak yazıldı, "yorumları
+   gör" değil — linkin gerçekte yaptığıyla eşleşsin diye. */
+export const googleReviewsUrl = 'https://g.page/r/CRALqW3KsQSrEBE/review';

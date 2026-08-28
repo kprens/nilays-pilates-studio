@@ -260,7 +260,7 @@ export const reviewsSection = {
     en: 'Google reviews will be connected here. Once the studio’s Google Business profile is shared, real reviews will be listed in this space.',
   },
   emptyBadge: { tr: 'Yayına hazır alan', en: 'Ready for content' },
-  cta: { tr: 'Google’da yorumları gör', en: 'See reviews on Google' },
+  cta: { tr: 'Google’da yorum bırakın', en: 'Leave a review on Google' },
 };
 
 export const contactSection = {
