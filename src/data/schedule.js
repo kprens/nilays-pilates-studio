@@ -1,20 +1,25 @@
 /* ---------------------------------------------------------------------------
    HAFTALIK DERS PROGRAMI
 
-   Nilay Hanım'ın 26 Ağu 2026'da WhatsApp'tan gönderdiği gerçek program.
-   Eğitmen ataması bu turda verilmedi — instructor alanı bilerek null;
-   uydurulmadı. İsimler geldiğinde ilgili session kaydına yazılması yeterli.
+   Nilay Hanım'ın 26 Ağu 2026'da WhatsApp'tan gönderdiği gerçek program;
+   27 Ağu'daki mesajıyla düzeltildi (Cumartesi saati, ders adı, dil ayrımı).
 
-   ⚠ Cumartesi: Nilay Hanım "Ctesi" yazdı ama saat belirtmedi. Saat
-   uydurulmadı — sessions dizisinde `time: null` ile işaretli, sitede
-   "saat teyit edilecek" olarak görünüyor. Saat gelince time alanına
-   '11:00' gibi yazmak yeterli.
+   Eğitmen ataması hâlâ verilmedi — instructor alanı bilerek null. Ayrıca
+   Nilay Hanım eğitmen isimlerinin takvimde HİÇ görünmesini istemiyor; bu
+   yüzden sections.mjs'teki program şablonu instructor alanını okumuyor.
+   Veri burada dursun diye alan silinmedi, sadece görüntülenmiyor.
+
+   ⚠ Dil ayrımı: `language` alanı hangi SAYFADA göründüğünü belirler —
+   TR sayfası yalnızca language:'tr' kayıtlarını, EN sayfası yalnızca
+   language:'en' kayıtlarını gösterir (sections.mjs'te süzülür). Bu artık
+   bir rozet değil, sayfa bazlı bir filtre; TR sayfasında İngilizce dersler
+   hiç görünmez.
 
    Bir ders kaydı:
      time        '18:00' ya da saat belirsizse null
      type        { tr, en }        ders türü
-     instructor  eğitmen adı ya da null
-     language    'tr' | 'en'
+     instructor  eğitmen adı ya da null (şu an sitede gösterilmiyor)
+     language    'tr' | 'en'        hangi sayfada görüneceği
      seats       (opsiyonel) ileride rezervasyon sistemi için kontenjan
 --------------------------------------------------------------------------- */
 
@@ -24,54 +29,54 @@ export const days = [
   {
     id: 'pzt', short: { tr: 'Pzt', en: 'Mon' }, name: { tr: 'Pazartesi', en: 'Monday' },
     sessions: [
-      { time: '12:00', type: { tr: 'Reformer', en: 'Reformer' }, instructor: null, language: 'tr' },
-      { time: '14:00', type: { tr: 'Reformer', en: 'Reformer' }, instructor: null, language: 'tr' },
-      { time: '17:30', type: { tr: 'Reformer', en: 'Reformer' }, instructor: null, language: 'en' },
-      { time: '18:20', type: { tr: 'Reformer', en: 'Reformer' }, instructor: null, language: 'tr' },
-      { time: '19:00', type: { tr: 'Reformer', en: 'Reformer' }, instructor: null, language: 'en' },
-      { time: '19:10', type: { tr: 'Reformer', en: 'Reformer' }, instructor: null, language: 'tr' },
+      { time: '12:00', type: { tr: 'Grup Reformer Dersi', en: 'Group Reformer Class' }, instructor: null, language: 'tr' },
+      { time: '14:00', type: { tr: 'Grup Reformer Dersi', en: 'Group Reformer Class' }, instructor: null, language: 'tr' },
+      { time: '17:30', type: { tr: 'Grup Reformer Dersi', en: 'Group Reformer Class' }, instructor: null, language: 'en' },
+      { time: '18:20', type: { tr: 'Grup Reformer Dersi', en: 'Group Reformer Class' }, instructor: null, language: 'tr' },
+      { time: '19:00', type: { tr: 'Grup Reformer Dersi', en: 'Group Reformer Class' }, instructor: null, language: 'en' },
+      { time: '19:10', type: { tr: 'Grup Reformer Dersi', en: 'Group Reformer Class' }, instructor: null, language: 'tr' },
     ],
   },
   {
     id: 'sal', short: { tr: 'Sal', en: 'Tue' }, name: { tr: 'Salı', en: 'Tuesday' },
     sessions: [
-      { time: '18:00', type: { tr: 'Reformer', en: 'Reformer' }, instructor: null, language: 'en' },
-      { time: '18:20', type: { tr: 'Reformer', en: 'Reformer' }, instructor: null, language: 'tr' },
-      { time: '19:10', type: { tr: 'Reformer', en: 'Reformer' }, instructor: null, language: 'tr' },
+      { time: '18:00', type: { tr: 'Grup Reformer Dersi', en: 'Group Reformer Class' }, instructor: null, language: 'en' },
+      { time: '18:20', type: { tr: 'Grup Reformer Dersi', en: 'Group Reformer Class' }, instructor: null, language: 'tr' },
+      { time: '19:10', type: { tr: 'Grup Reformer Dersi', en: 'Group Reformer Class' }, instructor: null, language: 'tr' },
     ],
   },
   {
     id: 'car', short: { tr: 'Çar', en: 'Wed' }, name: { tr: 'Çarşamba', en: 'Wednesday' },
     sessions: [
-      { time: '12:00', type: { tr: 'Reformer', en: 'Reformer' }, instructor: null, language: 'tr' },
-      { time: '17:30', type: { tr: 'Reformer', en: 'Reformer' }, instructor: null, language: 'en' },
-      { time: '18:20', type: { tr: 'Reformer', en: 'Reformer' }, instructor: null, language: 'tr' },
-      { time: '19:00', type: { tr: 'Reformer', en: 'Reformer' }, instructor: null, language: 'en' },
-      { time: '19:10', type: { tr: 'Reformer', en: 'Reformer' }, instructor: null, language: 'tr' },
+      { time: '12:00', type: { tr: 'Grup Reformer Dersi', en: 'Group Reformer Class' }, instructor: null, language: 'tr' },
+      { time: '17:30', type: { tr: 'Grup Reformer Dersi', en: 'Group Reformer Class' }, instructor: null, language: 'en' },
+      { time: '18:20', type: { tr: 'Grup Reformer Dersi', en: 'Group Reformer Class' }, instructor: null, language: 'tr' },
+      { time: '19:00', type: { tr: 'Grup Reformer Dersi', en: 'Group Reformer Class' }, instructor: null, language: 'en' },
+      { time: '19:10', type: { tr: 'Grup Reformer Dersi', en: 'Group Reformer Class' }, instructor: null, language: 'tr' },
     ],
   },
   {
     id: 'per', short: { tr: 'Per', en: 'Thu' }, name: { tr: 'Perşembe', en: 'Thursday' },
     sessions: [
-      { time: '14:00', type: { tr: 'Reformer', en: 'Reformer' }, instructor: null, language: 'tr' },
-      { time: '18:00', type: { tr: 'Reformer', en: 'Reformer' }, instructor: null, language: 'en' },
-      { time: '18:20', type: { tr: 'Reformer', en: 'Reformer' }, instructor: null, language: 'tr' },
-      { time: '19:10', type: { tr: 'Reformer', en: 'Reformer' }, instructor: null, language: 'tr' },
+      { time: '14:00', type: { tr: 'Grup Reformer Dersi', en: 'Group Reformer Class' }, instructor: null, language: 'tr' },
+      { time: '18:00', type: { tr: 'Grup Reformer Dersi', en: 'Group Reformer Class' }, instructor: null, language: 'en' },
+      { time: '18:20', type: { tr: 'Grup Reformer Dersi', en: 'Group Reformer Class' }, instructor: null, language: 'tr' },
+      { time: '19:10', type: { tr: 'Grup Reformer Dersi', en: 'Group Reformer Class' }, instructor: null, language: 'tr' },
     ],
   },
   {
     id: 'cum', short: { tr: 'Cum', en: 'Fri' }, name: { tr: 'Cuma', en: 'Friday' },
     sessions: [
-      { time: '12:00', type: { tr: 'Reformer', en: 'Reformer' }, instructor: null, language: 'tr' },
-      { time: '18:20', type: { tr: 'Reformer', en: 'Reformer' }, instructor: null, language: 'tr' },
-      { time: '19:00', type: { tr: 'Reformer', en: 'Reformer' }, instructor: null, language: 'en' },
-      { time: '19:10', type: { tr: 'Reformer', en: 'Reformer' }, instructor: null, language: 'tr' },
+      { time: '12:00', type: { tr: 'Grup Reformer Dersi', en: 'Group Reformer Class' }, instructor: null, language: 'tr' },
+      { time: '18:20', type: { tr: 'Grup Reformer Dersi', en: 'Group Reformer Class' }, instructor: null, language: 'tr' },
+      { time: '19:00', type: { tr: 'Grup Reformer Dersi', en: 'Group Reformer Class' }, instructor: null, language: 'en' },
+      { time: '19:10', type: { tr: 'Grup Reformer Dersi', en: 'Group Reformer Class' }, instructor: null, language: 'tr' },
     ],
   },
   {
     id: 'cmt', short: { tr: 'Cmt', en: 'Sat' }, name: { tr: 'Cumartesi', en: 'Saturday' },
     sessions: [
-      { time: null, type: { tr: 'Reformer', en: 'Reformer' }, instructor: null, language: 'tr' },
+      { time: '11:00', type: { tr: 'Grup Reformer Dersi', en: 'Group Reformer Class' }, instructor: null, language: 'tr' },
     ],
   },
   {

@@ -122,8 +122,9 @@ const placeholderShots = gallery.filter((g) => g.placeholder).map((g) => g.categ
 if (placeholderShots.length) todo.push(`assets/img/studio/* — eksik galeri kategorileri: ${placeholderShots.join(', ')}`);
 if (figures.approach.placeholder) todo.push('assets/img/studio/yaklasim — "Yaklaşımımız" bölümü için bir görsel (isteğe bağlı)');
 if (team.some((m) => m.ext === 'svg')) todo.push('assets/img/team/* — eğitmen portreleri (şu an tamamı yer tutucu)');
-if (days.some((d) => d.sessions.some((s) => !s.time))) todo.push('src/data/schedule.js — Cumartesi saati belirtilmedi');
-if (days.every((d) => d.sessions.every((s) => !s.instructor))) todo.push('src/data/schedule.js — hangi dersi hangi eğitmenin verdiği belirtilmedi');
+if (days.some((d) => d.sessions.some((s) => !s.time))) todo.push('src/data/schedule.js — saati belirtilmemiş ders var');
+/* Not: eğitmen adı bilerek istenmiyor (Nilay Hanım, 27 Ağu) — şablon
+   instructor alanını göstermiyor, bu yüzden eksik listesinde sorulmuyor. */
 
 console.log('\nStüdyodan beklenen bilgiler:');
 todo.forEach((x) => console.log('  ·', x));

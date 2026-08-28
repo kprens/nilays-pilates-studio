@@ -27,8 +27,8 @@ export const site = {
   },
 
   // ——— Stüdyodan beklenen bilgiler ———
-  phone: null,            // örn. { e164: '+905XXXXXXXXX', display: '0555 000 00 00' }
-  whatsapp: null,         // örn. '905XXXXXXXXX'  (wa.me için, + ve boşluk olmadan)
+  phone: { e164: '+905326956653', display: '0532 695 66 53' },
+  whatsapp: '905326956653', // Nilay Hanım: telefon ve WhatsApp aynı numara
   email: null,            // örn. 'merhaba@nilayspilates.com'
   hours: null,            // örn. [{ days:{tr:'Pzt–Cum',en:'Mon–Fri'}, time:'09:00 – 21:00' }]
 

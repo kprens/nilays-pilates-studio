@@ -257,11 +257,15 @@ export const schedule = (ctx) => {
   const { l } = ctx;
   const s = C.scheduleSection;
   const L = s.labels;
-  const enBadge = `<span class="badge-en">${esc(t(L.english, l))}</span>`;
 
   const timeLabel = (ss) => (ss.time ? ss.time : t(S.timeTbdLabel, l));
 
-  const columns = map(S.days, (day, i) => `<div class="week-day${day.sessions.length ? '' : ' is-empty'}" data-reveal${d(i * 55)}>
+  /* Dil ayrımı sayfa bazlı: TR sayfası yalnızca TR, EN sayfası yalnızca
+     EN dersleri gösterir. Eğitmen alanı Nilay Hanım'ın isteğiyle hiç
+     okunmuyor — sections.mjs bilerek ss.instructor'a dokunmuyor. */
+  const days = S.days.map((day) => ({ ...day, sessions: day.sessions.filter((ss) => ss.language === l) }));
+
+  const columns = map(days, (day, i) => `<div class="week-day${day.sessions.length ? '' : ' is-empty'}" data-reveal${d(i * 55)}>
     <div class="week-day-h">
       <span class="week-day-name">${esc(t(day.name, l))}</span>
       <span class="week-day-count">${day.sessions.length || '—'}</span>
@@ -270,26 +274,21 @@ export const schedule = (ctx) => {
       ? `<p class="week-empty">${esc(t(L.closed, l))}</p>`
       : `<div class="week-slots">${map(day.sessions, (ss) => `<div class="week-slot${ss.time ? '' : ' is-tbd'}">
           <span class="week-time">${esc(timeLabel(ss))}</span>
-          <span class="week-meta">
-            <span class="week-type">${esc(t(ss.type, l))}</span>
-            ${ss.language === 'en' ? enBadge : ''}
-            ${when(ss.instructor, `<span class="week-who">${esc(ss.instructor)}</span>`)}
-          </span>
+          <span class="week-meta"><span class="week-type">${esc(t(ss.type, l))}</span></span>
         </div>`)}</div>`}
   </div>`);
 
-  const tabs = map(S.days, (day, i) => `<button class="day-tab" type="button" role="tab" id="dtab-${day.id}"
+  const tabs = map(days, (day, i) => `<button class="day-tab" type="button" role="tab" id="dtab-${day.id}"
     aria-controls="dpanel-${day.id}" aria-selected="${i === 0}" tabindex="${i === 0 ? 0 : -1}">
     <span class="d">${esc(t(day.short, l))}</span><span class="c">${day.sessions.length || '–'}</span>
   </button>`);
 
-  const panels = map(S.days, (day, i) => `<div class="day-panel" id="dpanel-${day.id}" role="tabpanel" aria-labelledby="dtab-${day.id}"${i === 0 ? '' : ' hidden'}>
+  const panels = map(days, (day, i) => `<div class="day-panel" id="dpanel-${day.id}" role="tabpanel" aria-labelledby="dtab-${day.id}"${i === 0 ? '' : ' hidden'}>
     ${day.sessions.length === 0
       ? `<p class="sched-empty">${esc(t(L.closed, l))}</p>`
       : map(day.sessions, (ss) => `<article class="day-card${ss.time ? '' : ' is-tbd'}">
-          <p class="t"><span class="time">${esc(timeLabel(ss))}</span>${ss.language === 'en' ? enBadge : ''}</p>
+          <p class="t"><span class="time">${esc(timeLabel(ss))}</span></p>
           <p class="type">${esc(t(ss.type, l))}</p>
-          ${when(ss.instructor, `<p class="who">${esc(ss.instructor)}</p>`)}
         </article>`)}
   </div>`);
 
