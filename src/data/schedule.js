@@ -1,89 +1,51 @@
 /* ---------------------------------------------------------------------------
-   HAFTALIK DERS PROGRAMI
+   HAFTALIK DERS PROGRAMI — İNCE KÖPRÜ
 
-   Nilay Hanım'ın 26 Ağu 2026'da WhatsApp'tan gönderdiği gerçek program;
-   27 Ağu'daki mesajıyla düzeltildi (Cumartesi saati, ders adı, dil ayrımı).
+   Gerçek veri artık burada değil: schedule.json içinde. Nilay Hanım o
+   dosyayı /admin panelinden (Decap CMS) kod bilgisi olmadan düzenliyor —
+   sadece SAAT ve DİL giriyor; "Grup Reformer Dersi" yazısı ve gün adları
+   sabit olduğu için panelde hiç sormuyoruz.
 
-   Eğitmen ataması hâlâ verilmedi — instructor alanı bilerek null. Ayrıca
-   Nilay Hanım eğitmen isimlerinin takvimde HİÇ görünmesini istemiyor; bu
-   yüzden sections.mjs'teki program şablonu instructor alanını okumuyor.
-   Veri burada dursun diye alan silinmedi, sadece görüntülenmiyor.
+   Bu dosya JSON'u okuyup site şablonlarının (sections.mjs) beklediği eski
+   `days` şeklini birebir üretir. Yani sections.mjs'in TEK SATIRI bile
+   değişmedi — panel kurulumu görüntüde hiçbir risk taşımıyor.
 
-   ⚠ Dil ayrımı: `language` alanı hangi SAYFADA göründüğünü belirler —
-   TR sayfası yalnızca language:'tr' kayıtlarını, EN sayfası yalnızca
-   language:'en' kayıtlarını gösterir (sections.mjs'te süzülür). Bu artık
-   bir rozet değil, sayfa bazlı bir filtre; TR sayfasında İngilizce dersler
-   hiç görünmez.
-
-   Bir ders kaydı:
-     time        '18:00' ya da saat belirsizse null
-     type        { tr, en }        ders türü
-     instructor  eğitmen adı ya da null (şu an sitede gösterilmiyor)
-     language    'tr' | 'en'        hangi sayfada görüneceği
-     seats       (opsiyonel) ileride rezervasyon sistemi için kontenjan
+   Gün metadatası (kısaltma, tam ad) ve ders türü metni burada sabit —
+   bunlar Nilay Hanım'ın panelden değiştirmesi gereken şeyler değil.
 --------------------------------------------------------------------------- */
+
+import { readFileSync } from 'node:fs';
+import { dirname, resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const HERE = dirname(fileURLToPath(import.meta.url));
+const raw = JSON.parse(readFileSync(resolve(HERE, 'schedule.json'), 'utf8'));
+
+const DAY_META = {
+  pzt: { short: { tr: 'Pzt', en: 'Mon' }, name: { tr: 'Pazartesi', en: 'Monday' } },
+  sal: { short: { tr: 'Sal', en: 'Tue' }, name: { tr: 'Salı', en: 'Tuesday' } },
+  car: { short: { tr: 'Çar', en: 'Wed' }, name: { tr: 'Çarşamba', en: 'Wednesday' } },
+  per: { short: { tr: 'Per', en: 'Thu' }, name: { tr: 'Perşembe', en: 'Thursday' } },
+  cum: { short: { tr: 'Cum', en: 'Fri' }, name: { tr: 'Cuma', en: 'Friday' } },
+  cmt: { short: { tr: 'Cmt', en: 'Sat' }, name: { tr: 'Cumartesi', en: 'Saturday' } },
+  paz: { short: { tr: 'Paz', en: 'Sun' }, name: { tr: 'Pazar', en: 'Sunday' } },
+};
+
+/* Bugün tek bir ders türü var; panelde tekrar tekrar sormamak için sabit. */
+const CLASS_TYPE = { tr: 'Grup Reformer Dersi', en: 'Group Reformer Class' };
 
 export const isSample = false;
 
-export const days = [
-  {
-    id: 'pzt', short: { tr: 'Pzt', en: 'Mon' }, name: { tr: 'Pazartesi', en: 'Monday' },
-    sessions: [
-      { time: '12:00', type: { tr: 'Grup Reformer Dersi', en: 'Group Reformer Class' }, instructor: null, language: 'tr' },
-      { time: '14:00', type: { tr: 'Grup Reformer Dersi', en: 'Group Reformer Class' }, instructor: null, language: 'tr' },
-      { time: '17:30', type: { tr: 'Grup Reformer Dersi', en: 'Group Reformer Class' }, instructor: null, language: 'en' },
-      { time: '18:20', type: { tr: 'Grup Reformer Dersi', en: 'Group Reformer Class' }, instructor: null, language: 'tr' },
-      { time: '19:00', type: { tr: 'Grup Reformer Dersi', en: 'Group Reformer Class' }, instructor: null, language: 'en' },
-      { time: '19:10', type: { tr: 'Grup Reformer Dersi', en: 'Group Reformer Class' }, instructor: null, language: 'tr' },
-    ],
-  },
-  {
-    id: 'sal', short: { tr: 'Sal', en: 'Tue' }, name: { tr: 'Salı', en: 'Tuesday' },
-    sessions: [
-      { time: '18:00', type: { tr: 'Grup Reformer Dersi', en: 'Group Reformer Class' }, instructor: null, language: 'en' },
-      { time: '18:20', type: { tr: 'Grup Reformer Dersi', en: 'Group Reformer Class' }, instructor: null, language: 'tr' },
-      { time: '19:10', type: { tr: 'Grup Reformer Dersi', en: 'Group Reformer Class' }, instructor: null, language: 'tr' },
-    ],
-  },
-  {
-    id: 'car', short: { tr: 'Çar', en: 'Wed' }, name: { tr: 'Çarşamba', en: 'Wednesday' },
-    sessions: [
-      { time: '12:00', type: { tr: 'Grup Reformer Dersi', en: 'Group Reformer Class' }, instructor: null, language: 'tr' },
-      { time: '17:30', type: { tr: 'Grup Reformer Dersi', en: 'Group Reformer Class' }, instructor: null, language: 'en' },
-      { time: '18:20', type: { tr: 'Grup Reformer Dersi', en: 'Group Reformer Class' }, instructor: null, language: 'tr' },
-      { time: '19:00', type: { tr: 'Grup Reformer Dersi', en: 'Group Reformer Class' }, instructor: null, language: 'en' },
-      { time: '19:10', type: { tr: 'Grup Reformer Dersi', en: 'Group Reformer Class' }, instructor: null, language: 'tr' },
-    ],
-  },
-  {
-    id: 'per', short: { tr: 'Per', en: 'Thu' }, name: { tr: 'Perşembe', en: 'Thursday' },
-    sessions: [
-      { time: '14:00', type: { tr: 'Grup Reformer Dersi', en: 'Group Reformer Class' }, instructor: null, language: 'tr' },
-      { time: '18:00', type: { tr: 'Grup Reformer Dersi', en: 'Group Reformer Class' }, instructor: null, language: 'en' },
-      { time: '18:20', type: { tr: 'Grup Reformer Dersi', en: 'Group Reformer Class' }, instructor: null, language: 'tr' },
-      { time: '19:10', type: { tr: 'Grup Reformer Dersi', en: 'Group Reformer Class' }, instructor: null, language: 'tr' },
-    ],
-  },
-  {
-    id: 'cum', short: { tr: 'Cum', en: 'Fri' }, name: { tr: 'Cuma', en: 'Friday' },
-    sessions: [
-      { time: '12:00', type: { tr: 'Grup Reformer Dersi', en: 'Group Reformer Class' }, instructor: null, language: 'tr' },
-      { time: '18:20', type: { tr: 'Grup Reformer Dersi', en: 'Group Reformer Class' }, instructor: null, language: 'tr' },
-      { time: '19:00', type: { tr: 'Grup Reformer Dersi', en: 'Group Reformer Class' }, instructor: null, language: 'en' },
-      { time: '19:10', type: { tr: 'Grup Reformer Dersi', en: 'Group Reformer Class' }, instructor: null, language: 'tr' },
-    ],
-  },
-  {
-    id: 'cmt', short: { tr: 'Cmt', en: 'Sat' }, name: { tr: 'Cumartesi', en: 'Saturday' },
-    sessions: [
-      { time: '11:00', type: { tr: 'Grup Reformer Dersi', en: 'Group Reformer Class' }, instructor: null, language: 'tr' },
-    ],
-  },
-  {
-    id: 'paz', short: { tr: 'Paz', en: 'Sun' }, name: { tr: 'Pazar', en: 'Sunday' },
-    sessions: [],
-  },
-];
+export const days = Object.keys(DAY_META).map((id) => ({
+  id,
+  ...DAY_META[id],
+  sessions: (raw[id] || []).map((s) => ({
+    time: s.time || null,
+    type: CLASS_TYPE,
+    instructor: null,
+    language: s.language === 'en' ? 'en' : 'tr',
+  })),
+}));
 
 export const sampleNote = {
   tr: 'Aşağıdaki yerleşim örnektir. Stüdyonun güncel haftalık programı paylaşıldığında birebir işlenecek.',

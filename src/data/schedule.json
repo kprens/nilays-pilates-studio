@@ -1,0 +1,107 @@
+{
+  "pzt": [
+    {
+      "time": "12:00",
+      "language": "tr"
+    },
+    {
+      "time": "14:00",
+      "language": "tr"
+    },
+    {
+      "time": "17:30",
+      "language": "en"
+    },
+    {
+      "time": "18:20",
+      "language": "tr"
+    },
+    {
+      "time": "19:00",
+      "language": "en"
+    },
+    {
+      "time": "19:10",
+      "language": "tr"
+    }
+  ],
+  "sal": [
+    {
+      "time": "18:00",
+      "language": "en"
+    },
+    {
+      "time": "18:20",
+      "language": "tr"
+    },
+    {
+      "time": "19:10",
+      "language": "tr"
+    }
+  ],
+  "car": [
+    {
+      "time": "12:00",
+      "language": "tr"
+    },
+    {
+      "time": "17:30",
+      "language": "en"
+    },
+    {
+      "time": "18:20",
+      "language": "tr"
+    },
+    {
+      "time": "19:00",
+      "language": "en"
+    },
+    {
+      "time": "19:10",
+      "language": "tr"
+    }
+  ],
+  "per": [
+    {
+      "time": "14:00",
+      "language": "tr"
+    },
+    {
+      "time": "18:00",
+      "language": "en"
+    },
+    {
+      "time": "18:20",
+      "language": "tr"
+    },
+    {
+      "time": "19:10",
+      "language": "tr"
+    }
+  ],
+  "cum": [
+    {
+      "time": "12:00",
+      "language": "tr"
+    },
+    {
+      "time": "18:20",
+      "language": "tr"
+    },
+    {
+      "time": "19:00",
+      "language": "en"
+    },
+    {
+      "time": "19:10",
+      "language": "tr"
+    }
+  ],
+  "cmt": [
+    {
+      "time": "11:00",
+      "language": "tr"
+    }
+  ],
+  "paz": []
+}

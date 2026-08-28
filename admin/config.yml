@@ -1,0 +1,106 @@
+# ---------------------------------------------------------------------------
+# NILAY'S PILATES STUDIO — YÖNETİM PANELİ AYARLARI (Decap CMS)
+#
+# Bu panel sadece iki şeyi düzenler: haftalık ders programı ve paket
+# fiyatları. Değişiklik kaydedildiğinde doğrudan siteye yansır.
+#
+# backend.name canlıda gerçek bir git bağlantısına ("github" + OAuth proxy,
+# ya da "git-gateway") çevrilecek — bkz. README.md "Yönetim paneli" bölümü.
+# local_backend: true satırı yalnızca `npx decap-server` çalışırken devreye
+# girer, canlı sitede zararsızdır (proxy sunucu yoksa hiçbir etkisi olmaz).
+# ---------------------------------------------------------------------------
+
+backend:
+  name: github
+  repo: kprens/nilays-pilates-studio
+  branch: main
+
+local_backend: true
+
+site_url: https://kprens.github.io/nilays-pilates-studio/
+display_url: https://kprens.github.io/nilays-pilates-studio/
+logo_url: /assets/img/brand/favicon.svg
+
+locale: "tr"
+
+media_folder: "assets/img/studio"
+public_folder: "/assets/img/studio"
+
+collections:
+  - name: "program"
+    label: "Ders Programı"
+    files:
+      - name: "haftalik_program"
+        label: "Haftalık Program"
+        file: "src/data/schedule.json"
+        fields:
+          - &gun_pzt
+            label: "Pazartesi"
+            name: "pzt"
+            widget: "list"
+            summary: "{{fields.time}} — {{fields.language}}"
+            fields: &ders_alanlari
+              - label: "Saat"
+                name: "time"
+                widget: "string"
+                hint: "24 saat formatında, örnek: 18:00"
+                pattern: ['^([01]\d|2[0-3]):[0-5]\d$', "Saat SS:DD formatında olmalı — örnek: 18:00"]
+              - label: "Dil"
+                name: "language"
+                widget: "select"
+                options:
+                  - { label: "Türkçe", value: "tr" }
+                  - { label: "İngilizce", value: "en" }
+                default: "tr"
+          - <<: *gun_pzt
+            label: "Salı"
+            name: "sal"
+          - <<: *gun_pzt
+            label: "Çarşamba"
+            name: "car"
+          - <<: *gun_pzt
+            label: "Perşembe"
+            name: "per"
+          - <<: *gun_pzt
+            label: "Cuma"
+            name: "cum"
+          - <<: *gun_pzt
+            label: "Cumartesi"
+            name: "cmt"
+          - <<: *gun_pzt
+            label: "Pazar"
+            name: "paz"
+
+  - name: "paketler"
+    label: "Paketler"
+    files:
+      - name: "fiyatlar"
+        label: "Paket Fiyatları"
+        file: "src/data/pricing.json"
+        fields:
+          - &kategori
+            label: "Özel Ders — 1 Kişi"
+            name: "ozel"
+            widget: "object"
+            collapsed: false
+            fields: &kademeler
+              - label: "8 Ders"
+                name: "t8"
+                widget: "object"
+                fields: &kademe_alanlari
+                  - { label: "Toplam Fiyat (₺)", name: "total", widget: "number", value_type: "int", min: 0 }
+                  - { label: "Kaç Hafta Sürer", name: "weeks", widget: "number", value_type: "int", min: 1 }
+              - label: "12 Ders"
+                name: "t12"
+                widget: "object"
+                fields: *kademe_alanlari
+              - label: "24 Ders"
+                name: "t24"
+                widget: "object"
+                fields: *kademe_alanlari
+          - <<: *kategori
+            label: "2'li Ders — 2 Kişi"
+            name: "ikili"
+          - <<: *kategori
+            label: "Grup Dersi — 3 Kişi ve Üzeri"
+            name: "grup"
