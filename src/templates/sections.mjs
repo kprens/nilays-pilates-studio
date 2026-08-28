@@ -332,7 +332,7 @@ export const reviewsBlock = (ctx) => {
       </figure>`)}</div>`
     : `<div class="reviews-empty" data-reveal="fade">
         <span class="badge">${esc(t(s.emptyBadge, l))}</span>
-        <p>${esc(t(s.empty, l))}</p>
+        <p>${esc(t(googleReviewsUrl ? s.emptyLinked : s.empty, l))}</p>
         ${when(googleReviewsUrl, () => `<a class="btn btn-ghost btn-sm" href="${googleReviewsUrl}" target="_blank" rel="noopener noreferrer">${esc(t(s.cta, l))}${icon.arrow}</a>`)}
       </div>`;
 

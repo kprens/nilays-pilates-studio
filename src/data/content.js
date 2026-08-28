@@ -255,9 +255,16 @@ export const reviewsSection = {
   index: '09',
   kicker: { tr: 'Öğrenci Yorumları', en: 'Student Reviews' },
   title: { tr: 'Stüdyoda çalışanlar ne diyor?', en: 'What students say.' },
+  /* Google işletme profili linki henüz gelmediyse gösterilir. */
   empty: {
-    tr: 'Google yorumları bu alana bağlanacak. Stüdyonun Google işletme profili paylaşıldığında gerçek yorumlar burada otomatik olarak listelenecek.',
-    en: 'Google reviews will be connected here. Once the studio’s Google Business profile is shared, real reviews will be listed in this space.',
+    tr: 'Google yorumları bu alana bağlanacak. Stüdyonun Google işletme profili paylaşıldığında bu alan güncellenecek.',
+    en: 'Google reviews will be connected here. Once the studio’s Google Business profile is shared, this space will be updated.',
+  },
+  /* Link geldi ama sitede gösterecek yazılı yorum metni henüz yok — link
+     paylaşıldı diye otomatik yorum metni ÇEKİLMEZ, biri elle eklemeli. */
+  emptyLinked: {
+    tr: 'Şu an sitede gösterecek yazılı bir yorum yok. Google’daki yorumlarımıza göz atabilir, deneyiminizi paylaşmak isterseniz oradan bırakabilirsiniz.',
+    en: 'There are no written reviews to show here yet. You can browse our reviews on Google, or leave your own if you’d like to share your experience.',
   },
   emptyBadge: { tr: 'Yayına hazır alan', en: 'Ready for content' },
   cta: { tr: 'Google’da yorum bırakın', en: 'Leave a review on Google' },
