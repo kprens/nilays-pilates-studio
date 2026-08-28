@@ -4,16 +4,18 @@
 # Bu panel sadece iki şeyi düzenler: haftalık ders programı ve paket
 # fiyatları. Değişiklik kaydedildiğinde doğrudan siteye yansır.
 #
-# backend.name canlıda gerçek bir git bağlantısına ("github" + OAuth proxy,
-# ya da "git-gateway") çevrilecek — bkz. README.md "Yönetim paneli" bölümü.
-# local_backend: true satırı yalnızca `npx decap-server` çalışırken devreye
-# girer, canlı sitede zararsızdır (proxy sunucu yoksa hiçbir etkisi olmaz).
+# Giriş, kprens/nilay-cms-proxy reposundaki küçük bağlantı sunucusu
+# üzerinden GitHub OAuth ile yapılıyor (bkz. o reponun README.md'si).
+# local_backend: true satırı yalnızca `npx decap-server` yerelde çalışırken
+# devreye girer, canlı sitede zararsızdır (proxy orada koşmadığı için
+# otomatik olarak aşağıdaki gerçek backend'e düşer).
 # ---------------------------------------------------------------------------
 
 backend:
   name: github
   repo: kprens/nilays-pilates-studio
   branch: main
+  base_url: https://nilay-cms-proxy.vercel.app
 
 local_backend: true
 
