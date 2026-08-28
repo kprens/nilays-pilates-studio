@@ -1,0 +1,50 @@
+name: Panel kaydından siteyi yeniden derle
+
+# Nilay Hanım'ın /admin panelinden kaydettiği her değişiklik yalnızca
+# src/data/schedule.json ve pricing.json'ı günceller — asıl yayınlanan
+# index.html/en/index.html elle "node src/build.mjs" çalıştırılmadan
+# güncellenmez. Bu workflow o adımı otomatikleştirir: panel bu iki
+# dosyadan birine commit attığında derlemeyi kendisi çalıştırıp, üretilen
+# HTML'i kendi commit'i olarak geri gönderir.
+#
+# Sonsuz döngü riski yok: bu workflow'un kendi commit'i yalnızca
+# index.html/en/index.html/sitemap.xml/robots.txt'e dokunur, schedule.json
+# ya da pricing.json'a hiç dokunmaz — o yüzden `paths` filtresine takılıp
+# kendini tekrar tetiklemez.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "src/data/schedule.json"
+      - "src/data/pricing.json"
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Siteyi derle
+        run: node src/build.mjs
+
+      - name: Değişiklik varsa commit'le ve gönder
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add index.html en/index.html sitemap.xml robots.txt
+          if git diff --staged --quiet; then
+            echo "Derleme çıktısında değişiklik yok, commit atılmadı."
+          else
+            git commit -m "Otomatik derleme: panelden gelen içerik güncellemesi [skip ci]"
+            git push
+          fi
