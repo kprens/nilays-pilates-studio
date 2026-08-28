@@ -42,9 +42,9 @@ export const nav = [
   { id: 'dersler',   label: { tr: 'Dersler',       en: 'Classes' } },
   { id: 'studyo',    label: { tr: 'Stüdyo',        en: 'Studio' } },
   { id: 'yaklasim',  label: { tr: 'Yaklaşımımız',  en: 'Approach' } },
+  { id: 'program',   label: { tr: 'Ders Programı', en: 'Schedule' } },
   { id: 'ekip',      label: { tr: 'Ekip',          en: 'Team' } },
   { id: 'paketler',  label: { tr: 'Paketler',      en: 'Packages' } },
-  { id: 'program',   label: { tr: 'Ders Programı', en: 'Schedule' } },
   { id: 'iletisim',  label: { tr: 'İletişim',      en: 'Contact' } },
 ];
 

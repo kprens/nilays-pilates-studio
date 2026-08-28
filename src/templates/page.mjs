@@ -90,10 +90,10 @@ ${Sec.difference(ctx)}
 ${Sec.classes(ctx)}
 ${Sec.studio(ctx)}
 ${Sec.approach(ctx)}
+${Sec.schedule(ctx)}
 ${Sec.teamSection(ctx)}
 ${Sec.founder(ctx)}
 ${Sec.packages(ctx)}
-${Sec.schedule(ctx)}
 ${Sec.reviewsBlock(ctx)}
 ${Sec.contact(ctx)}
 </main>

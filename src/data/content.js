@@ -131,10 +131,10 @@ export const classes = {
         label: { tr: 'Özel Pilates Derslerini Keşfet', en: 'Explore Private Sessions' },
         href: '#paketler',
       },
-      image: { dir: 'studio', src: 'cadillac', ext: 'jpg' },
+      image: { dir: 'studio', src: 'birebir-ders', ext: 'jpg' },
       alt: {
-        tr: 'Cadillac ekipmanının bulunduğu sakin çalışma alanı',
-        en: 'The quiet room housing the Cadillac equipment',
+        tr: 'Birebir bir Pilates dersinden bir kare',
+        en: 'A moment from a one-to-one Pilates session',
       },
     },
   ],
@@ -189,7 +189,7 @@ export const approach = {
 };
 
 export const teamSection = {
-  index: '05',
+  index: '06',
   kicker: { tr: 'Ekibimiz', en: 'Our Team' },
   title: { tr: 'Deneyimli eğitmenler. Ortak bir yaklaşım.', en: 'Experienced instructors. One shared approach.' },
   lede: {
@@ -199,7 +199,7 @@ export const teamSection = {
 };
 
 export const founder = {
-  index: '06',
+  index: '07',
   kicker: { tr: 'Kurucu', en: 'Founder' },
   name: 'Nilay Kentkur',
   role: { tr: 'Kurucu ve Pilates Eğitmeni', en: 'Founder & Pilates Instructor' },
@@ -216,7 +216,7 @@ export const founder = {
 };
 
 export const pricingSection = {
-  index: '07',
+  index: '08',
   kicker: { tr: 'Paketler', en: 'Packages' },
   title: { tr: 'Size uygun paketi seçin.', en: 'Choose the package that fits you.' },
   labels: {
@@ -227,6 +227,8 @@ export const pricingSection = {
     best: { tr: 'En avantajlı', en: 'Best value' },
     cta: { tr: 'Bu paket için yazın', en: 'Ask about this package' },
     save: { tr: 'ders başına avantaj', en: 'saving per class' },
+    reveal: { tr: 'Fiyatları Gör', en: 'Show Prices' },
+    hide: { tr: 'Fiyatları Gizle', en: 'Hide Prices' },
   },
   note: {
     tr: 'Paket süreleri satın alma tarihinden itibaren geçerlidir. Ayrıntılar ve uygunluk için bize yazabilirsiniz.',
@@ -235,7 +237,7 @@ export const pricingSection = {
 };
 
 export const scheduleSection = {
-  index: '08',
+  index: '05',
   kicker: { tr: 'Ders Programı', en: 'Class Schedule' },
   title: { tr: 'Haftalık ders programı.', en: 'The weekly schedule.' },
   labels: {

@@ -1,11 +1,13 @@
 /* ---------------------------------------------------------------------------
    STÜDYO GALERİSİ
-   Nilay Hanım'ın 26 Ağu 2026'da gönderdiği gerçek stüdyo fotoğrafları.
+   Nilay Hanım'ın 26 ve 27 Ağu 2026'da gönderdiği gerçek stüdyo fotoğrafları.
+   27 Ağu'daki fotoğraflarda gerçek dersler ve öğrenciler var — "reformer" ve
+   "ders" kayıtları o yüzden artık boş oda değil, dolu bir sınıf gösteriyor.
 
-   Dokümandaki kategorilerden Tower, Chair (tek başına) ve gerçek bir ders
-   anı için henüz temiz bir kare yok — o kategoriler şimdilik yer tutucuda
-   kaldı. Cadillac fotoğrafının içinde bir Wunda Chair de görünüyor ama tek
-   başına net bir kare olmadığı için ayrı kategori olarak eklenmedi.
+   Dokümandaki kategorilerden yalnızca Tower ve Chair (tek başına) için hâlâ
+   temiz bir kare yok — o iki kategori yer tutucuda kaldı. Cadillac
+   fotoğrafının içinde bir Wunda Chair de görünüyor ama tek başına net bir
+   kare olmadığı için ayrı kategori olarak eklenmedi.
 
    Yeni fotoğraf geldiğinde: dosyayı assets/img/studio/ içine koyun, ilgili
    kaydın `src`/`ext` alanını güncelleyin, `placeholder` satırını silin.
@@ -22,7 +24,7 @@ export const gallery = [
   {
     src: 'reformer', ext: 'jpg', span: 'tall',
     category: { tr: 'Reformer', en: 'Reformer' },
-    alt: { tr: 'Stüdyodaki reformer ekipmanları', en: 'Reformer equipment in the studio' },
+    alt: { tr: 'Reformer üzerinde çalışan bir öğrenci', en: 'A student working on the reformer' },
   },
   {
     src: 'tower', ext: 'svg', span: 'std', placeholder: true,
@@ -45,9 +47,19 @@ export const gallery = [
     alt: { tr: 'Stüdyodan bir duvar detayı', en: 'A wall detail from the studio' },
   },
   {
-    src: 'ders', ext: 'svg', span: 'wide', placeholder: true,
+    src: 'ders', ext: 'jpg', span: 'wide',
     category: { tr: 'Ders', en: 'In Class' },
-    alt: { tr: 'Stüdyoda süren bir ders', en: 'A class in progress at the studio' },
+    alt: { tr: 'Stüdyoda süren bir grup dersi', en: 'A group class in progress at the studio' },
+  },
+  {
+    src: 'grup-dersi-1', ext: 'jpg', span: 'std',
+    category: { tr: 'Grup Dersi', en: 'Group Class' },
+    alt: { tr: 'Reformer grup dersinden bir kare', en: 'A moment from a reformer group class' },
+  },
+  {
+    src: 'grup-dersi-2', ext: 'jpg', span: 'tall',
+    category: { tr: 'Grup Dersi', en: 'Group Class' },
+    alt: { tr: 'Reformer grup dersinden bir kare', en: 'A moment from a reformer group class' },
   },
   {
     src: 'soyunma-alani', ext: 'jpg', span: 'std',

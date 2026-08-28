@@ -146,6 +146,17 @@
   }
 
   tablist(document, '#paketler .tab');
+
+  /* ---------------- 5b. FİYATLARI GÖSTER/GİZLE (paketler) ----------------- */
+  $$('#paketler .price-toggle').forEach((btn) => {
+    const panel = btn.closest('.panel');
+    const label = $('.price-toggle-label', btn);
+    btn.addEventListener('click', () => {
+      const open = panel.classList.toggle('prices-on');
+      btn.setAttribute('aria-expanded', String(open));
+      if (label) label.textContent = open ? label.dataset.hide : label.dataset.show;
+    });
+  });
   const selectDay = tablist(document, '.day-tabs .day-tab');
 
   /* Programda bugünün gününü mobilde açık başlat. */

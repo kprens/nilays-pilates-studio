@@ -227,6 +227,11 @@ export const packages = (ctx) => {
       const base = price(p.tiers[0]);
       return `<div class="panel" id="panel-${p.id}" role="tabpanel" aria-labelledby="tab-${p.id}"${i === 0 ? '' : ' hidden'}>
       <p class="lede panel-sum">${esc(t(p.summary, l))}</p>
+
+      <button class="btn btn-ghost price-toggle" type="button" aria-expanded="false" data-reveal="fade">
+        <span class="price-toggle-label" data-show="${esc(t(L.reveal, l))}" data-hide="${esc(t(L.hide, l))}">${esc(t(L.reveal, l))}</span>${icon.arrow}
+      </button>
+
       <div class="tiers">
         ${map(p.tiers, (tr) => {
           const v = price(tr);
