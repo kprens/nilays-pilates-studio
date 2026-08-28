@@ -4,10 +4,10 @@
    27 Ağu'daki fotoğraflarda gerçek dersler ve öğrenciler var — "reformer" ve
    "ders" kayıtları o yüzden artık boş oda değil, dolu bir sınıf gösteriyor.
 
-   Dokümandaki kategorilerden yalnızca Tower ve Chair (tek başına) için hâlâ
-   temiz bir kare yok — o iki kategori yer tutucuda kaldı. Cadillac
-   fotoğrafının içinde bir Wunda Chair de görünüyor ama tek başına net bir
-   kare olmadığı için ayrı kategori olarak eklenmedi.
+   28 Ağu'da Nilay Hanım daha önce gönderdiği iki fotoğrafı Tower ve Chair
+   olarak etiketledi (adam fotoğrafı = Chair, lotus odasındaki grup fotoğrafı
+   = Tower) — yeni dosya değil, mevcut fotoğrafların ekipman kimliği netleşti.
+   Dokümandaki tüm galeri kategorileri artık gerçek fotoğrafla dolu.
 
    Yeni fotoğraf geldiğinde: dosyayı assets/img/studio/ içine koyun, ilgili
    kaydın `src`/`ext` alanını güncelleyin, `placeholder` satırını silin.
@@ -27,19 +27,14 @@ export const gallery = [
     alt: { tr: 'Reformer üzerinde çalışan bir öğrenci', en: 'A student working on the reformer' },
   },
   {
-    src: 'tower', ext: 'svg', span: 'std', placeholder: true,
-    category: { tr: 'Tower', en: 'Tower' },
-    alt: { tr: 'Tower ekipmanı', en: 'Tower equipment' },
-  },
-  {
     src: 'cadillac', ext: 'jpg', span: 'std',
     category: { tr: 'Cadillac', en: 'Cadillac' },
     alt: { tr: 'Cadillac ekipmanının bulunduğu çalışma alanı', en: 'The room housing the Cadillac equipment' },
   },
   {
-    src: 'chair', ext: 'svg', span: 'std', placeholder: true,
+    src: 'birebir-ders', ext: 'jpg', span: 'std',
     category: { tr: 'Chair', en: 'Chair' },
-    alt: { tr: 'Chair ekipmanı', en: 'Chair equipment' },
+    alt: { tr: 'Chair ekipmanında çalışan bir öğrenci', en: 'A student working on the Chair' },
   },
   {
     src: 'detay', ext: 'jpg', span: 'std',
@@ -53,8 +48,8 @@ export const gallery = [
   },
   {
     src: 'grup-dersi-1', ext: 'jpg', span: 'std',
-    category: { tr: 'Grup Dersi', en: 'Group Class' },
-    alt: { tr: 'Reformer grup dersinden bir kare', en: 'A moment from a reformer group class' },
+    category: { tr: 'Tower · Grup Dersi', en: 'Tower · Group Class' },
+    alt: { tr: 'Tower ekipmanının bulunduğu odada grup dersi', en: 'A group class in the room with the Tower equipment' },
   },
   {
     src: 'grup-dersi-2', ext: 'jpg', span: 'tall',
