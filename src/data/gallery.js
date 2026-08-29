@@ -9,6 +9,11 @@
    = Tower) — yeni dosya değil, mevcut fotoğrafların ekipman kimliği netleşti.
    Dokümandaki tüm galeri kategorileri artık gerçek fotoğrafla dolu.
 
+   29 Ağu'da üç fotoğraf daha geldi: eğitmenin bir öğrenciye eşlik ettiği
+   bir esneme anı — "Yaklaşımımız" bölümünün görseli olarak kullanıldı
+   (figures.approach, artık placeholder değil) — ve iki ek Cadillac karesi
+   galeriye eklendi.
+
    Yeni fotoğraf geldiğinde: dosyayı assets/img/studio/ içine koyun, ilgili
    kaydın `src`/`ext` alanını güncelleyin, `placeholder` satırını silin.
 
@@ -71,12 +76,22 @@ export const gallery = [
     category: { tr: 'Banyo', en: 'Bathroom' },
     alt: { tr: 'Stüdyonun banyosu', en: 'The studio’s bathroom' },
   },
+  {
+    src: 'cadillac-pencere', ext: 'jpg', span: 'std',
+    category: { tr: 'Cadillac', en: 'Cadillac' },
+    alt: { tr: 'Cadillac ekipmanında çalışan bir öğrenci, pencere kenarındaki odada', en: 'A student working on the Cadillac, in the window-lit room' },
+  },
+  {
+    src: 'cadillac-kanat', ext: 'jpg', span: 'std',
+    category: { tr: 'Cadillac', en: 'Cadillac' },
+    alt: { tr: 'Cadillac ekipmanında çalışan bir öğrenci', en: 'A student working on the Cadillac' },
+  },
 ];
 
 /* Hero ve bölüm görselleri (galeri dışı) */
 export const figures = {
   hero:     { src: 'hero',        ext: 'jpg',
               alt: { tr: 'Nilay’s Pilates Studio — ana reformer salonu', en: 'Nilay’s Pilates Studio — the main reformer room' } },
-  approach: { src: 'yaklasim',    ext: 'svg', placeholder: true,
-              alt: { tr: 'Hareket üzerine çalışılan stüdyo alanı', en: 'The studio space where movement is practised' } },
+  approach: { src: 'yaklasim',    ext: 'jpg',
+              alt: { tr: 'Eğitmen, bir öğrenciye hareketinde eşlik ediyor', en: 'An instructor guiding a student through a movement' } },
 };

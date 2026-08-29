@@ -174,7 +174,7 @@ export const teamSection = (ctx) => {
     ${head(ctx, { index: s.index, kicker: s.kicker, title: s.title, lede: s.lede, id: 'ekip-h' })}
     <ul class="team">
       ${map(team, (m, i) => `<li class="member" data-reveal${d(i * 90)}>
-        ${fig(ctx, { src: m.photo, ext: m.ext, dir: 'team', placeholder: true, alt: { tr: `${m.name} — ${t(m.role, 'tr')}`, en: `${m.name} — ${t(m.role, 'en')}` } }, { delay: i * 90 })}
+        ${fig(ctx, { src: m.photo, ext: m.ext, dir: 'team', placeholder: m.ext === 'svg', alt: { tr: `${m.name} — ${t(m.role, 'tr')}`, en: `${m.name} — ${t(m.role, 'en')}` } }, { delay: i * 90 })}
         <h3 class="h3">${esc(m.name)}</h3>
         <p class="role">${esc(t(m.role, l))}</p>
       </li>`)}
@@ -191,13 +191,14 @@ export const founder = (ctx) => {
   return `<section class="section" id="kurucu" aria-labelledby="kurucu-h">
   <div class="wrap">
     <div class="founder">
-      ${fig(ctx, { src: person.photo, ext: person.ext, dir: 'team', placeholder: true, alt: { tr: `${s.name} portresi`, en: `Portrait of ${s.name}` } })}
+      ${fig(ctx, { src: person.photo, ext: person.ext, dir: 'team', placeholder: person.ext === 'svg', alt: { tr: `${s.name} portresi`, en: `Portrait of ${s.name}` } })}
       <div>
         <p class="eyebrow" data-reveal="fade"><span class="num">${s.index}</span> ${esc(t(s.kicker, l))}</p>
         <h2 class="h2" id="kurucu-h" data-reveal${d(60)}>${esc(s.name)}</h2>
         <p class="role" data-reveal${d(100)}>${esc(t(s.role, l))}</p>
+        ${when(s.headline, () => `<p class="h3 founder-headline" data-reveal${d(120)}>${map(t(s.headline, l), (line) => `${esc(line)}<br>`)}</p>`)}
         <div class="founder-body">
-          ${map(s.body, (p, i) => `<p class="${i === 0 ? 'lede' : 'body'}" data-reveal${d(140 + i * 70)}>${esc(t(p, l))}</p>`)}
+          ${map(s.body, (p, i) => `<p class="${i === 0 ? 'lede' : 'body'}" data-reveal${d(160 + i * 60)}>${esc(t(p, l))}</p>`)}
         </div>
       </div>
     </div>

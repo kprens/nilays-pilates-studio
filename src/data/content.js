@@ -5,9 +5,11 @@
 
 export const hero = {
   eyebrow: { tr: 'Gaziosmanpaşa · Ankara', en: 'Gaziosmanpaşa · Ankara' },
+  /* Nilay Hanım'ın 29 Ağu'da istediği başlık — önceki "Daha iyi hareket
+     edin. Daha güçlü hissedin." yerine. */
   title: {
-    tr: ['Daha iyi hareket edin.', 'Daha güçlü hissedin.'],
-    en: ['Move better.', 'Feel stronger.'],
+    tr: ['Bedeninize iyi gelen hareket.', 'Zihninize kalan hafiflik.'],
+    en: ['Movement that’s good for your body.', 'A lightness that stays with your mind.'],
   },
   lede: {
     tr: 'Ankara’da kişiye özel yaklaşımla çalışan butik Pilates stüdyosu.',
@@ -203,14 +205,58 @@ export const founder = {
   kicker: { tr: 'Kurucu', en: 'Founder' },
   name: 'Nilay Kentkur',
   role: { tr: 'Kurucu ve Pilates Eğitmeni', en: 'Founder & Pilates Instructor' },
+  /* Nilay Hanım'ın 29 Ağu'da gönderdiği kendi yazdığı biyografi — birebir
+     korunmuştur. Kısa tek satırlık vurgular (poem-tarzı ayrımlar) \n ile
+     tek paragraf içinde tutulur; CSS'te .founder-body p için
+     white-space:pre-line bu satır kırılımlarını olduğu gibi gösterir. */
+  headline: {
+    tr: ['Hareketi öğretmekle başladım.', 'Bedeni anlamaya dönüştü.'],
+    en: ['I began by teaching movement.', 'It became about understanding the body.'],
+  },
   body: [
     {
-      tr: 'Nilay Kentkur, Nilay’s Pilates Studio’nun kurucusu ve Pilates eğitmenidir.',
-      en: 'Nilay Kentkur is the founder of Nilay’s Pilates Studio and a Pilates instructor.',
+      tr: 'Ben Nilay.',
+      en: 'I’m Nilay.',
     },
     {
-      tr: 'Hareket farkındalığı, doğru teknik ve kişiye özel yönlendirmeyi merkeze alan yaklaşımıyla stüdyoyu; insanların güçlenebileceği, hareket kalitesini geliştirebileceği ve bedenlerine daha fazla güven duyabileceği profesyonel bir alan olarak oluşturmuştur.',
-      en: 'With an approach centred on movement awareness, correct technique and individual guidance, she built the studio as a professional space where people can grow stronger, improve the quality of their movement and feel more confident in their bodies.',
+      tr: '2013 yılında ders vermeye başladığımda, hareketi insanlara öğretmekle başlayan bu yolculuğun zamanla çok daha derin bir yere dönüşeceğini bilmiyordum.',
+      en: 'When I started teaching in 2013, I had no idea that a journey which began with teaching movement to people would grow into something much deeper.',
+    },
+    {
+      tr: 'Yıllar içinde Pilates’in yanı sıra Yoga ve Hamak Yoga alanlarında da eğitim aldım ve dersler verdim. Bedenin nasıl çalıştığını daha iyi anlayabilmek için anatomi, klinik Pilates ve omurga patolojileri üzerine uzmanlığımı geliştirdim.',
+      en: 'Over the years, alongside Pilates, I trained and taught in Yoga and Aerial Yoga as well. To understand how the body truly works, I built my expertise in anatomy, clinical Pilates and spinal pathologies.',
+    },
+    {
+      tr: 'Bugün bir hareketi öğretirken yalnızca "nasıl yapılacağını" düşünmüyorum.\nNeden yapıldığını,\nhangi bedene nasıl uyarlanması gerektiğini\nve o bedenin harekete nasıl cevap verdiğini düşünüyorum.',
+      en: 'Today, when I teach a movement, I don’t just think about “how it’s done.”\nI think about why it’s done,\nhow it needs to be adapted for each body,\nand how that body responds to the movement.',
+    },
+    {
+      tr: 'Çünkü her beden aynı değildir.',
+      en: 'Because no two bodies are the same.',
+    },
+    {
+      tr: 'Bir hareket bir kişi için güçlendirici olabilirken, başka bir kişi için değiştirilmesi gerekebilir. İyi bir eğitmen içinse önemli olan herkese aynı hareketi yaptırmak değil, doğru hareketi doğru kişiye verebilmektir.',
+      en: 'A movement that strengthens one person may need to be changed entirely for another. For a good instructor, what matters isn’t having everyone do the same movement — it’s giving the right movement to the right person.',
+    },
+    {
+      tr: 'Benim Pilates anlayışım tam olarak burada başlıyor.',
+      en: 'This is exactly where my understanding of Pilates begins.',
+    },
+    {
+      tr: 'Güçlü bir beden elbette önemli. Ama benim için Pilates bundan daha fazlası.',
+      en: 'A strong body matters, of course. But for me, Pilates is more than that.',
+    },
+    {
+      tr: 'Bedenini tanımak.\nHareketine güvenmek.\nDaha iyi hissetmek.\nVe bir gün "Bunu yapabiliyorum." diyebilmek.',
+      en: 'Getting to know your body.\nTrusting your movement.\nFeeling better.\nAnd one day, being able to say, “I can do this.”',
+    },
+    {
+      tr: 'Nilay’s Pilates Studio’yu da bu anlayışla kurdum.',
+      en: 'I founded Nilay’s Pilates Studio with exactly this understanding.',
+    },
+    {
+      tr: 'Burada amacımız yalnızca daha fit görünmek değil; bedeninizle daha güçlü, daha bilinçli ve daha güvenli bir ilişki kurmanız.',
+      en: 'Our goal here isn’t just to look fitter — it’s for you to build a stronger, more conscious and more confident relationship with your own body.',
     },
   ],
 };

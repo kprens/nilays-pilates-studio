@@ -365,7 +365,9 @@ h1,h2,h3,.display{
 .founder .figure{aspect-ratio:4/5}
 .founder .h2{max-width:12ch; margin-top:1rem}
 .founder .role{font-size:.75rem; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:var(--clay); margin-top:1rem}
+.founder-headline{margin-top:1.5rem; max-width:20ch; color:var(--ink-2)}
 .founder-body{display:grid; gap:1.25rem; margin-top:1.75rem; max-width:46ch}
+.founder-body p{white-space:pre-line}
 @media (min-width:56rem){.founder{grid-template-columns:minmax(0,.8fr) minmax(0,1fr)}}
 
 /* ------------------------------- 14. PAKETLER ---------------------------- */
