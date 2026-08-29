@@ -177,6 +177,7 @@ export const teamSection = (ctx) => {
         ${fig(ctx, { src: m.photo, ext: m.ext, dir: 'team', placeholder: m.ext === 'svg', alt: { tr: `${m.name} — ${t(m.role, 'tr')}`, en: `${m.name} — ${t(m.role, 'en')}` } }, { delay: i * 90 })}
         <h3 class="h3">${esc(m.name)}</h3>
         <p class="role">${esc(t(m.role, l))}</p>
+        ${when(m.bio, () => `<p class="small member-bio">${esc(t(m.bio, l))}</p>`)}
       </li>`)}
     </ul>
   </div>

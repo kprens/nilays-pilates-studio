@@ -359,6 +359,7 @@ h1,h2,h3,.display{
 .member .figure{aspect-ratio:3/4; margin-bottom:1.25rem}
 .member h3{font-size:clamp(1.25rem,1.8vw,1.5rem)}
 .member .role{font-size:.6875rem; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); margin-top:.5rem}
+.member-bio{margin-top:.85rem; color:var(--ink-2)}
 @media (min-width:48rem){.team{grid-template-columns:repeat(3,1fr)}}
 
 .founder{display:grid; gap:clamp(2rem,5vw,4.5rem); align-items:center}
