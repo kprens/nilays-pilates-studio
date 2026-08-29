@@ -123,7 +123,8 @@ if (!pricing.some((p) => p.tiers.some((t) => t.en))) todo.push('src/data/pricing
 const placeholderShots = gallery.filter((g) => g.placeholder).map((g) => g.category.tr);
 if (placeholderShots.length) todo.push(`assets/img/studio/* — eksik galeri kategorileri: ${placeholderShots.join(', ')}`);
 if (figures.approach.placeholder) todo.push('assets/img/studio/yaklasim — "Yaklaşımımız" bölümü için bir görsel (isteğe bağlı)');
-if (team.some((m) => m.ext === 'svg')) todo.push('assets/img/team/* — eğitmen portreleri (şu an tamamı yer tutucu)');
+const missingPortraits = team.filter((m) => m.ext === 'svg').map((m) => m.name);
+if (missingPortraits.length) todo.push(`assets/img/team/* — eksik portreler: ${missingPortraits.join(', ')}`);
 if (days.some((d) => d.sessions.some((s) => !s.time))) todo.push('src/data/schedule.js — saati belirtilmemiş ders var');
 /* Not: eğitmen adı bilerek istenmiyor (Nilay Hanım, 27 Ağu) — şablon
    instructor alanını göstermiyor, bu yüzden eksik listesinde sorulmuyor. */

@@ -12,7 +12,7 @@ export const team = [
     role: { tr: 'Kurucu ve Pilates Eğitmeni', en: 'Founder & Pilates Instructor' },
     initials: 'NK',
     photo: 'nilay-kentkur',
-    ext: 'svg',
+    ext: 'jpg',
     founder: true,
   },
   {
