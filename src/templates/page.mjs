@@ -8,7 +8,7 @@ import { t, esc } from '../lib/util.mjs';
 import * as Sec from './sections.mjs';
 
 const FONTS =
-  'https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Inter:wght@400;500;600&display=swap';
+  'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Inter:wght@400;500;600&display=swap';
 
 function jsonLd(l) {
   const data = {

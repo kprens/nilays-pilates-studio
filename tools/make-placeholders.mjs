@@ -136,7 +136,7 @@ function svg({ w, h, art, seed, tone = 0, mono = null, label = '' }) {
   <rect width="${w}" height="${h}" fill="url(#g${id})"/>
   <g opacity=".55"><path d="M${(w * lightX) / 100} 0 L${(w * (lightX + 26)) / 100} 0 L${(w * (lightX + 52)) / 100} ${h} L${(w * (lightX + 6)) / 100} ${h} Z" fill="url(#l${id})"/></g>
   ${mono
-      ? `<text x="50%" y="50%" text-anchor="middle" dominant-baseline="central" font-family="Fraunces, Georgia, serif" font-size="${Math.min(w, h) * 0.3}" font-weight="300" fill="${C.ink}" opacity=".2" letter-spacing="${Math.min(w, h) * 0.01}">${mono}</text>`
+      ? `<text x="50%" y="50%" text-anchor="middle" dominant-baseline="central" font-family="Cormorant Garamond, Georgia, serif" font-size="${Math.min(w, h) * 0.3}" font-weight="300" fill="${C.ink}" opacity=".2" letter-spacing="${Math.min(w, h) * 0.01}">${mono}</text>`
       : ''}
   ${isWash ? `<g opacity=".5"><path d="M${(w * (lightX + 44)) / 100} 0 L${(w * (lightX + 70)) / 100} 0 L${w} ${h * 0.82} L${(w * (lightX + 30)) / 100} ${h} Z" fill="url(#l${id})"/></g>` : ''}
   <g transform="translate(${ax.toFixed(1)} ${ay.toFixed(1)}) scale(${(artScale / 100).toFixed(4)})" opacity="${isWash ? 0.14 : art === 'founder' ? 0.16 : 0.3}">${ART[art] ? ART[art]() : ''}</g>
