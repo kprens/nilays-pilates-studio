@@ -13,8 +13,11 @@ export const site = {
   tagline: { tr: 'Butik Pilates Stüdyosu • Ankara', en: 'Boutique Pilates Studio • Ankara' },
 
   // Yayın adresi (canonical + hreflang + og:url için)
-  origin: 'https://kprens.github.io',
-  base: '/nilays-pilates-studio/',
+  // 29 Ağu: nilayspilates.com alındı, GitHub Pages custom domain olarak
+  // bağlandı — artık kök dizinden yayınlanıyor, /nilays-pilates-studio/
+  // alt yolu yok.
+  origin: 'https://nilayspilates.com',
+  base: '/',
 
   address: {
     street: 'Beyaz Zambaklar Sok. 9/4',   // Instagram profilinden; stüdyoya teyit ettir

@@ -19,8 +19,8 @@ backend:
 
 local_backend: true
 
-site_url: https://kprens.github.io/nilays-pilates-studio/
-display_url: https://kprens.github.io/nilays-pilates-studio/
+site_url: https://nilayspilates.com/
+display_url: https://nilayspilates.com/
 logo_url: /assets/img/brand/favicon.svg
 
 locale: "tr"
