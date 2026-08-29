@@ -275,6 +275,14 @@ export const pricingSection = {
     save: { tr: 'ders başına avantaj', en: 'saving per class' },
     reveal: { tr: 'Fiyatları Gör', en: 'Show Prices' },
     hide: { tr: 'Fiyatları Gizle', en: 'Hide Prices' },
+    /* İngilizce sayfada fiyat yerine WhatsApp'a yönlenen "Ask us" kartı
+       gösteriliyor (Nilay Hanım, 29 Ağu) — TR karşılığı hiç kullanılmıyor
+       ama alan ikili kalsın diye dolduruldu. */
+    askBody: {
+      tr: 'Bu paket için güncel fiyatı WhatsApp üzerinden paylaşıyoruz.',
+      en: 'Pricing for this package is shared over WhatsApp — message us and we’ll get right back to you.',
+    },
+    askCta: { tr: 'WhatsApp’tan sorun', en: 'Ask on WhatsApp' },
   },
   note: {
     tr: 'Paket süreleri satın alma tarihinden itibaren geçerlidir. Ayrıntılar ve uygunluk için bize yazabilirsiniz.',

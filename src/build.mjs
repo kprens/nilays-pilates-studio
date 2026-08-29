@@ -14,7 +14,6 @@ import { page } from './templates/page.mjs';
 import { site } from './data/site.js';
 import { isSample, days } from './data/schedule.js';
 import { reviews, googleReviewsUrl } from './data/reviews.js';
-import { pricing } from './data/pricing.js';
 import { gallery, figures } from './data/gallery.js';
 import { team } from './data/team.js';
 
@@ -119,7 +118,6 @@ if (!site.formEndpoint && !site.whatsapp) todo.push('site.formEndpoint ya da sit
 if (isSample) todo.push('src/data/schedule.js — gerçek haftalık program (şu an örnek)');
 if (!reviews.length) todo.push('src/data/reviews.js — Google yorumları (bölüm boş durumda)');
 if (!googleReviewsUrl) todo.push('src/data/reviews.js — Google işletme profili linki');
-if (!pricing.some((p) => p.tiers.some((t) => t.en))) todo.push('src/data/pricing.js — İngilizce sayfa için ayrı fiyat (şu an TR fiyatları gösteriliyor)');
 const placeholderShots = gallery.filter((g) => g.placeholder).map((g) => g.category.tr);
 if (placeholderShots.length) todo.push(`assets/img/studio/* — eksik galeri kategorileri: ${placeholderShots.join(', ')}`);
 if (figures.approach.placeholder) todo.push('assets/img/studio/yaklasim — "Yaklaşımımız" bölümü için bir görsel (isteğe bağlı)');

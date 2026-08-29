@@ -206,6 +206,20 @@ export const founder = (ctx) => {
 </section>`;
 };
 
+/* İngilizce sayfada fiyat yerine gösterilen WhatsApp yönlendirme kartı
+   (Nilay Hanım, 29 Ağu — İngilizce fiyat listelemek yerine "bize sorun"). */
+const askCard = (ctx, p) => {
+  const { l } = ctx;
+  const L = C.pricingSection.labels;
+  const msg = `Hi! I'd like to ask about pricing for the ${t(p.name, l)} package.`;
+  const href = site.whatsapp ? `https://wa.me/${site.whatsapp}?text=${encodeURIComponent(msg)}` : '#iletisim';
+  const ext = site.whatsapp ? ' target="_blank" rel="noopener noreferrer"' : '';
+  return `<div class="tiers-ask" data-reveal="fade">
+    <p class="body">${esc(t(L.askBody, l))}</p>
+    <a class="btn" href="${href}"${ext}>${esc(t(L.askCta, l))}${icon.arrow}</a>
+  </div>`;
+};
+
 /* ------------------------------- PAKETLER -------------------------------- */
 export const packages = (ctx) => {
   const { l } = ctx;
@@ -229,7 +243,7 @@ export const packages = (ctx) => {
       return `<div class="panel" id="panel-${p.id}" role="tabpanel" aria-labelledby="tab-${p.id}"${i === 0 ? '' : ' hidden'}>
       <p class="lede panel-sum">${esc(t(p.summary, l))}</p>
 
-      <button class="btn btn-ghost price-toggle" type="button" aria-expanded="false" data-reveal="fade">
+      ${l === 'en' ? askCard(ctx, p) : `<button class="btn btn-ghost price-toggle" type="button" aria-expanded="false" data-reveal="fade">
         <span class="price-toggle-label" data-show="${esc(t(L.reveal, l))}" data-hide="${esc(t(L.hide, l))}">${esc(t(L.reveal, l))}</span>${icon.arrow}
       </button>
 
@@ -249,7 +263,7 @@ export const packages = (ctx) => {
             <a class="tier-cta" href="#iletisim">${esc(t(L.cta, l))}${icon.arrow}</a>
           </article>`;
         })}
-      </div>
+      </div>`}
     </div>`;
     })}
 

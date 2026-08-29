@@ -408,6 +408,8 @@ h1,h2,h3,.display{
 .tier.is-best .tier-cta{color:var(--on-deep)}
 .tier:hover .tier-cta,.tier:focus-within .tier-cta{opacity:1; transform:none}
 .price-note{margin-top:1.5rem; max-width:56ch}
+.tiers-ask{display:grid; gap:1.25rem; align-items:start; padding:clamp(1.5rem,3vw,2.25rem); background:var(--paper-2); border:1px solid var(--line); max-width:34rem}
+.tiers-ask .body{color:var(--ink-2)}
 @media (min-width:48rem){.tiers{grid-template-columns:repeat(3,1fr)}}
 @media (hover:none){.tier-cta{opacity:1; transform:none}}
 
