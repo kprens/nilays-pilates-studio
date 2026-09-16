@@ -143,6 +143,80 @@ export const classes = {
         en: 'A moment from a one-to-one Pilates session',
       },
     },
+    /* Nilay Hanım'ın 5 Eyl'de gönderdiği metinler — TR birebir, EN çevirisi
+       eklendi. Sağlıkla ilgili iddialar (hamilelik, ağrı) müşterinin kendi
+       ifadeleriyle sınırlı tutuldu, doktor onayı uyarısı "facts" alanında
+       görünür şekilde korundu, hiç kırpılmadı. */
+    {
+      id: 'hamile-pilatesi',
+      label: { tr: 'Hamile Pilatesi', en: 'Pregnancy Pilates' },
+      name: { tr: 'Hamile Pilatesi', en: 'Pregnancy Pilates' },
+      headline: {
+        tr: 'Değişen Bedeninize, Güvenli ve Kontrollü Hareket.',
+        en: 'Safe, Controlled Movement For Your Changing Body.',
+      },
+      body: {
+        tr: 'Derslerin içeriği; gebeliğin dönemine, egzersiz geçmişine ve kişisel ihtiyaçlara göre uyarlanır. Bel ve sırt desteğinden doğuma hazırlığa kadar; bedeninizi daha iyi tanımanıza, doğum sırasında kullanabileceğiniz hareket ve nefes becerilerini geliştirmenize yardımcı olur.',
+        en: 'Class content is adapted to your stage of pregnancy, exercise background and personal needs. From back and lower-back support to preparing for birth, it helps you get to know your body better and build the movement and breathing skills you can use during labour.',
+      },
+      facts: [
+        {
+          label: { tr: 'Kimler için?', en: 'Who is it for?' },
+          value: {
+            tr: 'Gebeliğin her döneminde, kişisel ihtiyaca göre uyarlanan dersler.',
+            en: 'Classes adapted to your needs at any stage of pregnancy.',
+          },
+        },
+        {
+          label: { tr: 'Önemli', en: 'Important' },
+          value: {
+            tr: 'Egzersize başlamadan önce doktor onayı alınmalıdır.',
+            en: 'A doctor’s approval is required before starting.',
+          },
+        },
+      ],
+      cta: { label: { tr: 'İletişime Geç', en: 'Get in Touch' }, href: '#iletisim' },
+      image: { dir: 'studio', src: 'reformer', ext: 'jpg' },
+      alt: {
+        tr: 'Reformer üzerinde kontrollü bir hareket',
+        en: 'A controlled movement on the reformer',
+      },
+    },
+    {
+      id: 'klinik-pilates',
+      label: { tr: 'Klinik Pilates', en: 'Clinical Pilates' },
+      name: { tr: 'Klinik Pilates', en: 'Clinical Pilates' },
+      headline: {
+        tr: 'Ağrıyı Azaltmakla Kalmayın, Daha Güçlü Hareket Edin.',
+        en: 'Don’t Just Reduce Pain — Move Stronger.',
+      },
+      body: {
+        tr: 'Kişinin mevcut fiziksel durumunu ve ihtiyaçlarını dikkate alan, kontrollü ve kişiye özel bir egzersiz yaklaşımı. Bel-boyun problemlerinden skolyoza, ameliyat sonrası toparlanmadan kas dengesizliklerine kadar; her ders, hazır bir program yerine kişinin ihtiyaçları ve hedefleri doğrultusunda şekillendirilir.',
+        en: 'A controlled, personalised exercise approach that takes your current physical condition and needs into account. From back and neck issues to scoliosis, post-surgery recovery to muscle imbalances, every class is shaped around your needs and goals rather than a fixed program.',
+      },
+      facts: [
+        {
+          label: { tr: 'Kimler için?', en: 'Who is it for?' },
+          value: {
+            tr: 'Bel/boyun ağrısı, skolyoz, ameliyat sonrası toparlanma ve sporcu performansı.',
+            en: 'Back/neck pain, scoliosis, post-surgery recovery and athletic performance.',
+          },
+        },
+        {
+          label: { tr: 'Yaklaşım', en: 'Approach' },
+          value: {
+            tr: 'Doktor/fizyoterapist önerileri doğrultusunda, tamamen kişiye özel.',
+            en: 'Fully personalised, in line with doctor/physiotherapist guidance.',
+          },
+        },
+      ],
+      cta: { label: { tr: 'İletişime Geç', en: 'Get in Touch' }, href: '#iletisim' },
+      image: { dir: 'studio', src: 'cadillac', ext: 'jpg' },
+      alt: {
+        tr: 'Cadillac ekipmanının bulunduğu çalışma alanı',
+        en: 'The room housing the Cadillac equipment',
+      },
+    },
   ],
 };
 
