@@ -106,3 +106,20 @@ collections:
           - <<: *kategori
             label: "Grup Dersi — 3 Kişi ve Üzeri"
             name: "grup"
+
+  - name: "yorumlar"
+    label: "Yorumlar"
+    files:
+      - name: "ogrenci_yorumlari"
+        label: "Öğrenci Yorumları"
+        file: "src/data/reviews.json"
+        fields:
+          - label: "Yorumlar"
+            name: "reviews"
+            widget: "list"
+            summary: "{{fields.author}} — {{fields.rating}}/5"
+            fields:
+              - { label: "İsim", name: "author", widget: "string", hint: "Örnek: Ayşe K." }
+              - { label: "Puan", name: "rating", widget: "number", value_type: "int", min: 1, max: 5, default: 5 }
+              - { label: "Yorum Metni", name: "text", widget: "text" }
+              - { label: "Tarih", name: "date", widget: "datetime", required: false, date_format: "YYYY-MM-DD", time_format: false, picker_utc: false }

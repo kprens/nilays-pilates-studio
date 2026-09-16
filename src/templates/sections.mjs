@@ -343,7 +343,7 @@ export const reviewsBlock = (ctx) => {
   const body = reviews.length
     ? `<div class="review-grid">${map(reviews, (r, i) => `<figure class="review" data-reveal${d(i * 80)}>
         <p class="stars" aria-label="${r.rating}/5">${stars(r.rating)}</p>
-        <blockquote>${esc(t(r.text, l))}</blockquote>
+        <blockquote>${esc(r.text)}</blockquote>
         <cite>${esc(r.author)}</cite>
       </figure>`)}</div>`
     : `<div class="reviews-empty" data-reveal="fade">
