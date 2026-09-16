@@ -145,7 +145,21 @@
     return select;
   }
 
-  tablist(document, '#paketler .tab');
+  const selectPaketTab = tablist(document, '#paketler .tab');
+
+  /* "Grup Dersi Fiyatlarını Gör" gibi dış linkler doğrudan ilgili paket
+     sekmesini açıp oraya kaydırsın — kullanıcı Özel sekmesine girip
+     elle Grup'a geçmek zorunda kalmasın (Nilay Hanım, 5 Eyl). */
+  $$('[data-tab-target]').forEach((a) => {
+    const tab = document.getElementById(`tab-${a.getAttribute('data-tab-target')}`);
+    const section = document.getElementById('paketler');
+    if (!tab || !section || !selectPaketTab) return;
+    a.addEventListener('click', (e) => {
+      e.preventDefault();
+      selectPaketTab(tab);
+      section.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'start' });
+    });
+  });
 
   /* ---------------- 5b. FİYATLARI GÖSTER/GİZLE (paketler) ----------------- */
   $$('#paketler .price-toggle').forEach((btn) => {

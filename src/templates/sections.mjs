@@ -102,7 +102,7 @@ export const classes = (ctx) => {
         <dl class="facts" data-reveal${d(200)}>
           ${map(it.facts, (f) => `<div><dt>${esc(t(f.label, l))}</dt><dd>${esc(t(f.value, l))}</dd></div>`)}
         </dl>
-        <a class="link" href="${it.cta.href}" data-reveal${d(260)}>${esc(t(it.cta.label, l))}${icon.arrow}</a>
+        <a class="link" href="${it.cta.href}"${when(it.cta.tab, () => ` data-tab-target="${it.cta.tab}"`)} data-reveal${d(260)}>${esc(t(it.cta.label, l))}${icon.arrow}</a>
       </div>
     </article>`)}
   </div>

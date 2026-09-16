@@ -100,7 +100,10 @@ export const classes = {
           value: { tr: 'Maksimum 7 kişi', en: 'Maximum 7 people' },
         },
       ],
-      cta: { label: { tr: 'Ders Programını Gör', en: 'See the Schedule' }, href: '#program' },
+      /* 5 Eyl — Nilay Hanım: grup fiyatı buradan hiç ulaşılamıyordu, özel
+         ders sekmesine girip oradan Grup'a geçmek gerekiyordu. Artık
+         doğrudan paketler bölümüne, Grup sekmesi açık şekilde gidiyor. */
+      cta: { label: { tr: 'Grup Dersi Fiyatlarını Gör', en: 'See Group Class Pricing' }, href: '#paketler', tab: 'grup' },
       image: { dir: 'studio', src: 'genel-gorunum-2', ext: 'jpg' },
       alt: {
         tr: 'Stüdyonun reformer grup dersi salonu',
@@ -132,6 +135,7 @@ export const classes = {
       cta: {
         label: { tr: 'Özel Pilates Derslerini Keşfet', en: 'Explore Private Sessions' },
         href: '#paketler',
+        tab: 'ozel',
       },
       image: { dir: 'studio', src: 'birebir-ders', ext: 'jpg' },
       alt: {
@@ -314,11 +318,13 @@ export const reviewsSection = {
     tr: 'Google yorumları bu alana bağlanacak. Stüdyonun Google işletme profili paylaşıldığında bu alan güncellenecek.',
     en: 'Google reviews will be connected here. Once the studio’s Google Business profile is shared, this space will be updated.',
   },
-  /* Link geldi ama sitede gösterecek yazılı yorum metni henüz yok — link
-     paylaşıldı diye otomatik yorum metni ÇEKİLMEZ, biri elle eklemeli. */
+  /* 5 Eyl — Nilay Hanım: gerçek Google yorumları var, "gösterecek yorum yok"
+     cümlesi bunu yansıtmıyor, kaldırılsın. Link hâlâ bir "yorum YAZ" linki
+     (bkz. reviews.js), yorumları listeleyemiyor — o yüzden metin "yorumları
+     gör" demiyor, teşekkür + "siz de bırakın" çerçevesinde kalıyor. */
   emptyLinked: {
-    tr: 'Şu an sitede gösterecek yazılı bir yorum yok. Google’daki yorumlarımıza göz atabilir, deneyiminizi paylaşmak isterseniz oradan bırakabilirsiniz.',
-    en: 'There are no written reviews to show here yet. You can browse our reviews on Google, or leave your own if you’d like to share your experience.',
+    tr: 'Google’da bizimle deneyimini paylaşan öğrencilerimize teşekkür ederiz. Siz de aşağıdaki butondan yorumunuzu bırakabilirsiniz.',
+    en: 'Thank you to the students who’ve shared their experience with us on Google. You’re welcome to leave your own using the button below.',
   },
   emptyBadge: { tr: 'Yayına hazır alan', en: 'Ready for content' },
   cta: { tr: 'Google’da yorum bırakın', en: 'Leave a review on Google' },
