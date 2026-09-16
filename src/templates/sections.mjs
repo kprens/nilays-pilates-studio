@@ -347,7 +347,7 @@ export const reviewsBlock = (ctx) => {
         <cite>${esc(r.author)}</cite>
       </figure>`)}</div>`
     : `<div class="reviews-empty" data-reveal="fade">
-        <span class="badge">${esc(t(s.emptyBadge, l))}</span>
+        ${when(!googleReviewsUrl, () => `<span class="badge">${esc(t(s.emptyBadge, l))}</span>`)}
         <p>${esc(t(googleReviewsUrl ? s.emptyLinked : s.empty, l))}</p>
         ${when(googleReviewsUrl, () => `<a class="btn btn-ghost btn-sm" href="${googleReviewsUrl}" target="_blank" rel="noopener noreferrer">${esc(t(s.cta, l))}${icon.arrow}</a>`)}
       </div>`;
